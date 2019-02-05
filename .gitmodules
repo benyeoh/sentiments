@@ -1,3 +1,6 @@
 [submodule "bert"]
 	path = bert
 	url = https://github.com/benyeoh/bert
+[submodule "sandbox/glue/download_glue_repo"]
+	path = sandbox/glue/download_glue_repo
+	url = https://gist.github.com/60c2bdb54d156a41194446737ce03e2e.git
