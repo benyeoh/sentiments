@@ -330,7 +330,7 @@ def create_model(bert_config,
         "output_bias", [1], initializer=tf.zeros_initializer())
 
     with tf.variable_scope("loss"):
-        if False:  # is_training:
+        if is_training:
             # I.e., 0.1 dropout
             output_layer = tf.nn.dropout(output_layer, keep_prob=0.9)
 
