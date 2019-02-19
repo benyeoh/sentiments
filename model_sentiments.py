@@ -92,7 +92,7 @@ class FiQAProcessor(object):
                 InputExample(guid=guid, text_a=sentence, text_b=None, label=sentiment_score))
         return examples
 
-    def get_train_eval_examples(self, data_dir, train_ratio=0.8):
+    def get_train_eval_examples(self, data_dir, train_ratio=0.9):
         data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
 
         # Take 80-20 for train/eval
@@ -337,7 +337,7 @@ def create_model(bert_config,
         logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
 
-        sentiments = tf.nn.tanh(logits)
+        sentiments = logits #tf.nn.tanh(logits)
 
         per_example_loss = tf.square(sentiments - labels)
         loss = tf.reduce_mean(per_example_loss)
@@ -350,7 +350,7 @@ def create_model(bert_config,
         #per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
         #loss = tf.reduce_mean(per_example_loss)
 
-        return (loss, per_example_loss, logits, sentiments)
+        return (loss, per_example_loss, sentiments)
 
 
 def model_fn_builder(bert_config,
@@ -381,7 +381,7 @@ def model_fn_builder(bert_config,
 
         is_training = (mode == tf.estimator.ModeKeys.TRAIN)
 
-        (total_loss, per_example_loss, logits, sentiments) = create_model(
+        (total_loss, per_example_loss, sentiments) = create_model(
             bert_config, is_training, input_ids, input_mask, segment_ids, labels,
             use_one_hot_embeddings)
 

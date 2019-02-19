@@ -15,7 +15,6 @@ import bert.tokenization as tokenization
 import tensorflow as tf
 
 
-
 flags = tf.flags
 
 FLAGS = flags.FLAGS
