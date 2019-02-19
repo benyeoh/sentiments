@@ -22,7 +22,7 @@ def run(flags):
     else:
         fiqa_processor = processors.FiQAPostsProcessor(flags["data_dir"])
         
-    processor = processors.FiQAClassProcessor(fiqa_processor)
+    processor = processors.FiQAClassProcessor(fiqa_processor, class_separation=[-0.1, 0.1])
     train_common.run_classifier(flags, processor)
 
 
