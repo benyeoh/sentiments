@@ -7,12 +7,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import model_sentiments
-
 import os
 import bert.modeling as modeling
 import bert.tokenization as tokenization
 import tensorflow as tf
+
+import model_sentiments
+import processors
 
 
 # Required parameters
@@ -131,7 +132,7 @@ def run(flags):
 
     tf.gfile.MakeDirs(FLAGS.output_dir)
 
-    processor = model_sentiments.FiQAProcessor()
+    processor = processors.FiQAProcessor(FLAGS.data_dir)
 
     tokenizer = tokenization.FullTokenizer(
         vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)
@@ -156,7 +157,7 @@ def run(flags):
     num_train_steps = None
     num_warmup_steps = None
 
-    train_examples, eval_examples = processor.get_train_eval_examples(FLAGS.data_dir)
+    train_examples = processor.get_train_examples()
     #train_examples = train_examples[:1]
     num_train_steps = int(
         len(train_examples) / FLAGS.train_batch_size * FLAGS.num_train_epochs)
@@ -196,6 +197,7 @@ def run(flags):
         drop_remainder=True)
     estimator.train(input_fn=train_input_fn, max_steps=num_train_steps)
 
+    eval_examples = processor.get_eval_examples()
     num_actual_eval_examples = len(eval_examples)
     if FLAGS.use_tpu:
         # TPU requires a fixed batch size for all batches, therefore the number

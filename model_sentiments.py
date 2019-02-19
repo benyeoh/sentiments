@@ -18,27 +18,6 @@ import bert.tokenization as tokenization
 import tensorflow as tf
 
 
-class InputExample(object):
-    """A single training/test example for simple sequence classification."""
-
-    def __init__(self, guid, text_a, text_b=None, label=None):
-        """Constructs a InputExample.
-
-        Args:
-          guid: Unique id for the example.
-          text_a: string. The untokenized text of the first sequence. For single
-            sequence tasks, only this sequence must be specified.
-          text_b: (Optional) string. The untokenized text of the second sequence.
-            Only must be specified for sequence pair tasks.
-          label: (Optional) string. The label of the example. This should be
-            specified for train and dev examples, but not for test examples.
-        """
-        self.guid = guid
-        self.text_a = text_a
-        self.text_b = text_b
-        self.label = label
-
-
 class PaddingInputExample(object):
     """Fake example so the num input examples is a multiple of the batch size.
 
@@ -66,42 +45,6 @@ class InputFeatures(object):
         self.segment_ids = segment_ids
         self.label = label
         self.is_real_example = is_real_example
-
-
-class FiQAProcessor(object):
-
-    def _read_json_file(self, input_file):
-        with tf.gfile.Open(input_file, "r") as f:
-            data_dict = json.load(f)
-            return data_dict
-        return None
-
-    def _create_examples(self, dict_data):
-        examples = []
-        for k, v in dict_data.items():
-            guid = k
-            sentence = tokenization.convert_to_unicode(v["sentence"])
-            infos = v["info"]
-
-            # We sum all the scores if we have more than 1 target
-            total_sentiment_score = 0.0
-            for info in infos:
-                total_sentiment_score += float(info["sentiment_score"])
-            sentiment_score = total_sentiment_score / float(len(infos))
-            examples.append(
-                InputExample(guid=guid, text_a=sentence, text_b=None, label=sentiment_score))
-        return examples
-
-    def get_train_eval_examples(self, data_dir, train_ratio=0.9):
-        data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
-
-        # Take 80-20 for train/eval
-        num_train = int(round(len(data_dict) * train_ratio))
-        all_data = list(data_dict.items())
-        train_data_dict = dict(all_data[:num_train])
-        eval_data_dict = dict(all_data[num_train:])
-
-        return (self._create_examples(train_data_dict), self._create_examples(eval_data_dict))
 
 
 def convert_single_example(ex_index, example, max_seq_length,
@@ -270,7 +213,7 @@ def file_based_input_fn_builder(input_file, seq_length, is_training,
         d = tf.data.TFRecordDataset(input_file)
         if is_training:
             d = d.repeat()
-            d = d.shuffle(buffer_size=100)
+            d = d.shuffle(buffer_size=1000)
 
         d = d.apply(
             tf.contrib.data.map_and_batch(
@@ -341,9 +284,9 @@ def create_model(bert_config,
         logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
 
-        sentiments = logits#tf.nn.tanh(logits)
+        scores = logits#tf.nn.tanh(logits)
 
-        per_example_loss = tf.square(sentiments - labels)
+        per_example_loss = tf.square(scores - labels)
         loss = tf.reduce_mean(per_example_loss)
 
         #probabilities = tf.nn.softmax(logits, axis=-1)
@@ -354,7 +297,7 @@ def create_model(bert_config,
         #per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
         #loss = tf.reduce_mean(per_example_loss)
 
-        return (loss, per_example_loss, sentiments)
+        return (loss, per_example_loss, scores)
 
 
 def model_fn_builder(bert_config,
@@ -385,7 +328,7 @@ def model_fn_builder(bert_config,
 
         is_training = (mode == tf.estimator.ModeKeys.TRAIN)
 
-        (total_loss, per_example_loss, sentiments) = create_model(
+        (total_loss, per_example_loss, scores) = create_model(
             bert_config, is_training, input_ids, input_mask, segment_ids, labels,
             use_one_hot_embeddings)
 
@@ -447,7 +390,7 @@ def model_fn_builder(bert_config,
         else:
             output_spec = tf.contrib.tpu.TPUEstimatorSpec(
                 mode=mode,
-                predictions={"sentiments": sentiments},
+                predictions={"scores": scores},
                 scaffold_fn=scaffold_fn)
         return output_spec
 
@@ -500,7 +443,7 @@ def input_fn_builder(features, seq_length, is_training, drop_remainder):
 
         if is_training:
             d = d.repeat()
-            d = d.shuffle(buffer_size=100)
+            d = d.shuffle(buffer_size=1000)
 
         d = d.batch(batch_size=batch_size, drop_remainder=drop_remainder)
         return d
