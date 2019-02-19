@@ -98,6 +98,8 @@ tf.flags.DEFINE_integer(
     "num_tpu_cores", 8,
     "Only used if `use_tpu` is True. Total number of TPU cores to use.")
 
+tf.flags.DEFINE_bool("use_dropout", True, "Whether to use dropout.")
+
 
 def run(flags):
     # I'm lazy
@@ -115,6 +117,11 @@ def run(flags):
                                                   FLAGS.init_checkpoint)
 
     bert_config = modeling.BertConfig.from_json_file(FLAGS.bert_config_file)
+
+    if not FLAGS.use_dropout:
+        tf.logging.info("Disabling dropout")
+        bert_config.attention_probs_dropout_prob = 0.0
+        bert_config.hidden_dropout_prob = 0.0
 
     if FLAGS.max_seq_length > bert_config.max_position_embeddings:
         raise ValueError(

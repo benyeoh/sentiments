@@ -270,7 +270,7 @@ def file_based_input_fn_builder(input_file, seq_length, is_training,
         d = tf.data.TFRecordDataset(input_file)
         if is_training:
             d = d.repeat()
-            d = d.shuffle(buffer_size=5000)
+            d = d.shuffle(buffer_size=100)
 
         d = d.apply(
             tf.contrib.data.map_and_batch(
@@ -330,14 +330,18 @@ def create_model(bert_config,
         "output_bias", [1], initializer=tf.zeros_initializer())
 
     with tf.variable_scope("loss"):
-        if is_training:
+        if (is_training and not
+            (bert_config.hidden_dropout_prob == 0.0
+             and bert_config.attention_probs_dropout_prob == 0.0)):
             # I.e., 0.1 dropout
             output_layer = tf.nn.dropout(output_layer, keep_prob=0.9)
+        else:
+            tf.logging.info("No dropout on final layer")
 
         logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
 
-        sentiments = logits #tf.nn.tanh(logits)
+        sentiments = tf.nn.tanh(logits)
 
         per_example_loss = tf.square(sentiments - labels)
         loss = tf.reduce_mean(per_example_loss)
@@ -401,14 +405,16 @@ def model_fn_builder(bert_config,
             else:
                 tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
 
-        #tf.logging.info("**** Trainable Variables ****")
-        # for var in tvars:
-        #    init_string = ""
-        #    if var.name in initialized_variable_names:
-        #        init_string = ", *INIT_FROM_CKPT*"
-        #    tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
-        #                    init_string)
-
+        """
+        tf.logging.info("**** Trainable Variables ****")
+        for var in tvars:
+            init_string = ""
+            if var.name in initialized_variable_names:
+                init_string = ", *INIT_FROM_CKPT*"
+            tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
+                            init_string)
+        """
+        
         output_spec = None
         if mode == tf.estimator.ModeKeys.TRAIN:
 
@@ -494,7 +500,7 @@ def input_fn_builder(features, seq_length, is_training, drop_remainder):
 
         if is_training:
             d = d.repeat()
-            d = d.shuffle(buffer_size=5000)
+            d = d.shuffle(buffer_size=100)
 
         d = d.batch(batch_size=batch_size, drop_remainder=drop_remainder)
         return d
