@@ -19,6 +19,9 @@ import train_common
 
 tf.flags.DEFINE_bool("debug_examples", False, "Testing / debugging data.")
 
+tf.flags.DEFINE_bool("use_headlines", True, "Headlines data.")
+
+tf.flags.DEFINE_bool("use_posts", True, "Posts data.")
 
 def run(flags):
     # I'm lazy
@@ -50,8 +53,13 @@ def run(flags):
 
     tf.gfile.MakeDirs(FLAGS.output_dir)
 
-    processor = processors.FiQAPostsProcessor(FLAGS.data_dir)
-
+    if FLAGS.use_headlines and FLAGS.use_posts:
+        processor = processors.FiQACombineProcessor(FLAGS.data_dir)
+    elif FLAGS.use_headlines:
+        processor = processors.FiQAHeadlinesProcessor(FLAGS.data_dir)
+    else:
+        processor = processors.FiQAPostsProcessor(FLAGS.data_dir)        
+        
     tokenizer = tokenization.FullTokenizer(
         vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)
 
