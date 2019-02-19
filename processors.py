@@ -61,7 +61,7 @@ class FiQAPostsProcessor(object):
             guid = k
             sentence = tokenization.convert_to_unicode(v["sentence"])
             # Remove URLS in sentence
-            sentence = re.sub(r'^https?:\/\/.*[\r\n]*', '', sentence)
+            sentence = re.sub(r'http\S+', '', sentence)
             infos = v["info"]
 
             # We sum all the scores if we have more than 1 target
