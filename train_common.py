@@ -9,7 +9,6 @@ import tensorflow as tf
 
 import model_classifier
 import processors
-import train_common
 
 
 # Required parameters

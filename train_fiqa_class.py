@@ -3,10 +3,10 @@
 
 """BERT finetuning runner."""
 
-import tensorflow as tf
-
 import processors
 import train_common
+
+import tensorflow as tf
 
 
 tf.flags.DEFINE_bool("use_headlines", True, "Headlines data.")
