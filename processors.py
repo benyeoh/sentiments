@@ -118,7 +118,7 @@ class FiQAHeadlinesProcessor(object):
         return self._create_examples(self._eval_data_dict)
 
 
-class FiQACombineProcessor(self):
+class FiQACombineProcessor(object):
 
     def __init__(self, data_dir, train_ratio=0.9):
         self._posts = FiQAPostsProcessor(data_dir, train_ratio)
