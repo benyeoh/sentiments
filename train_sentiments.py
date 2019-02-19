@@ -17,6 +17,9 @@ import processors
 import train_common
 
 
+tf.flags.DEFINE_bool("debug_examples", False, "Testing / debugging data.")
+
+
 def run(flags):
     # I'm lazy
     class AttrDict(dict):
@@ -73,7 +76,10 @@ def run(flags):
     num_warmup_steps = None
 
     train_examples = processor.get_train_examples()
-    #train_examples = train_examples[:1]
+    
+    if FLAGS.debug_examples:
+        train_examples = train_examples[:8]
+
     num_train_steps = int(
         len(train_examples) / FLAGS.train_batch_size * FLAGS.num_train_epochs)
     num_warmup_steps = int(num_train_steps * FLAGS.warmup_proportion)
@@ -113,6 +119,9 @@ def run(flags):
     estimator.train(input_fn=train_input_fn, max_steps=num_train_steps)
 
     eval_examples = processor.get_eval_examples()
+    if FLAGS.debug_examples:
+        eval_examples = train_examples[:8]
+
     num_actual_eval_examples = len(eval_examples)
     if FLAGS.use_tpu:
         # TPU requires a fixed batch size for all batches, therefore the number
