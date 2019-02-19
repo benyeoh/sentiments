@@ -23,6 +23,7 @@ tf.flags.DEFINE_bool("use_headlines", True, "Headlines data.")
 
 tf.flags.DEFINE_bool("use_posts", True, "Posts data.")
 
+
 def run(flags):
     # I'm lazy
     class AttrDict(dict):

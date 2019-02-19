@@ -165,6 +165,30 @@ class DataProcessor(object):
             return lines
 
 
+class FiQAClassProcessor(DataProcessor):
+
+    def __init__(self, fiqa_processor):
+        self._processor = fiqa_processor
+        
+    def get_train_examples(self, data_dir):
+        train_examples = self._processor.get_train_examples()
+        for example in train_examples:
+            example.label = "1" if example.label > 0.0 else "0"
+        return train_examples
+
+    def get_dev_examples(self, data_dir):
+        eval_examples = self._processor.get_eval_examples()
+        for example in eval_examples:
+            example.label = "1" if example.label > 0.0 else "0"
+        return eval_examples
+
+    #def get_test_examples(self, data_dir):
+    #    return self._get_dev_examples(data_dir)
+
+    def get_labels(self):
+        return ["0", "1"]
+
+    
 class SSTProcessor(DataProcessor):
 
     def get_train_examples(self, data_dir):
