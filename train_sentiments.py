@@ -15,68 +15,64 @@ import bert.tokenization as tokenization
 import tensorflow as tf
 
 
-flags = tf.flags
-
-FLAGS = flags.FLAGS
-
 # Required parameters
-flags.DEFINE_string(
+tf.flags.DEFINE_string(
     "data_dir", None,
     "The input data dir. Should contain the .tsv files (or other data files) "
     "for the task.")
 
-flags.DEFINE_string(
+tf.flags.DEFINE_string(
     "bert_config_file", "bert_models/uncased_L-12_H-768_A-12/bert_config.json",
     "The config json file corresponding to the pre-trained BERT model. "
     "This specifies the model architecture.")
 
-flags.DEFINE_string("vocab_file", "bert_models/uncased_L-12_H-768_A-12/vocab.txt",
+tf.flags.DEFINE_string("vocab_file", "bert_models/uncased_L-12_H-768_A-12/vocab.txt",
                     "The vocabulary file that the BERT model was trained on.")
 
-flags.DEFINE_string(
+tf.flags.DEFINE_string(
     "output_dir", "tmp/sentiments/",
     "The output directory where the model checkpoints will be written.")
 
 # Other parameters
 
-flags.DEFINE_string(
+tf.flags.DEFINE_string(
     "init_checkpoint", "bert_models/uncased_L-12_H-768_A-12/bert_model.ckpt",
     "Initial checkpoint (usually from a pre-trained BERT model).")
 
-flags.DEFINE_bool(
+tf.flags.DEFINE_bool(
     "do_lower_case", True,
     "Whether to lower case the input text. Should be True for uncased "
     "models and False for cased models.")
 
-flags.DEFINE_integer(
+tf.flags.DEFINE_integer(
     "max_seq_length", 128,
     "The maximum total input sequence length after WordPiece tokenization. "
     "Sequences longer than this will be truncated, and sequences shorter "
     "than this will be padded.")
 
-flags.DEFINE_integer("train_batch_size", 32, "Total batch size for training.")
+tf.flags.DEFINE_integer("train_batch_size", 32, "Total batch size for training.")
 
-flags.DEFINE_integer("eval_batch_size", 8, "Total batch size for eval.")
+tf.flags.DEFINE_integer("eval_batch_size", 8, "Total batch size for eval.")
 
-flags.DEFINE_integer("predict_batch_size", 8, "Total batch size for predict.")
+tf.flags.DEFINE_integer("predict_batch_size", 8, "Total batch size for predict.")
 
-flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for Adam.")
+tf.flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for Adam.")
 
-flags.DEFINE_float("num_train_epochs", 3.0,
+tf.flags.DEFINE_float("num_train_epochs", 3.0,
                    "Total number of training epochs to perform.")
 
-flags.DEFINE_float(
+tf.flags.DEFINE_float(
     "warmup_proportion", 0.1,
     "Proportion of training to perform linear learning rate warmup for. "
     "E.g., 0.1 = 10% of training.")
 
-flags.DEFINE_integer("save_checkpoints_steps", 1000,
+tf.flags.DEFINE_integer("save_checkpoints_steps", 1000,
                      "How often to save the model checkpoint.")
 
-flags.DEFINE_integer("iterations_per_loop", 1000,
+tf.flags.DEFINE_integer("iterations_per_loop", 1000,
                      "How many steps to make in each estimator call.")
 
-flags.DEFINE_bool("use_tpu", False, "Whether to use TPU or GPU/CPU.")
+tf.flags.DEFINE_bool("use_tpu", False, "Whether to use TPU or GPU/CPU.")
 
 tf.flags.DEFINE_string(
     "tpu_name", None,
@@ -98,12 +94,21 @@ tf.flags.DEFINE_string(
 
 tf.flags.DEFINE_string("master", None, "[Optional] TensorFlow master URL.")
 
-flags.DEFINE_integer(
+tf.flags.DEFINE_integer(
     "num_tpu_cores", 8,
     "Only used if `use_tpu` is True. Total number of TPU cores to use.")
 
 
-def main(_):
+def run(flags):
+    # I'm lazy
+    class AttrDict(dict):
+        def __init__(self, *args, **kwargs):
+            super(AttrDict, self).__init__(*args, **kwargs)
+            self.__dict__ = self
+            
+    FLAGS = AttrDict()
+    FLAGS.update(flags)
+
     tf.logging.set_verbosity(tf.logging.INFO)
 
     tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,
@@ -277,9 +282,13 @@ def main(_):
     '''
 
 
+def main(_):
+    run(tf.app.flags.FLAGS.flag_values_dict())
+
+
 if __name__ == "__main__":
-    flags.mark_flag_as_required("data_dir")
-    # flags.mark_flag_as_required("vocab_file")
-    # flags.mark_flag_as_required("bert_config_file")
-    # flags.mark_flag_as_required("output_dir")
+    tf.flags.mark_flag_as_required("data_dir")
+    # tf.flags.mark_flag_as_required("vocab_file")
+    # tf.flags.mark_flag_as_required("bert_config_file")
+    # tf.flags.mark_flag_as_required("output_dir")
     tf.app.run()
