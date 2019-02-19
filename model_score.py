@@ -330,6 +330,8 @@ def model_fn_builder(bert_config,
             bert_config, is_training, input_ids, input_mask, segment_ids, labels,
             use_one_hot_embeddings)
 
+        tf.logging.info("*** Using checkpoint: %s ***" % (init_checkpoint))
+
         tvars = tf.trainable_variables()
         initialized_variable_names = {}
         scaffold_fn = None
