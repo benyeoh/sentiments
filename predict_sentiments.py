@@ -7,12 +7,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import model_sentiments
-
 import os
 import bert.modeling as modeling
 import bert.tokenization as tokenization
 import tensorflow as tf
+
+import model_score
 
 
 flags = tf.flags
@@ -119,7 +119,7 @@ def main(_):
             num_shards=FLAGS.num_tpu_cores,
             per_host_input_for_training=is_per_host))
 
-    model_fn = model_sentiments.model_fn_builder(
+    model_fn = model_scores.model_fn_builder(
         bert_config=bert_config,
         init_checkpoint=FLAGS.init_checkpoint,
         learning_rate=0.0,
@@ -138,7 +138,7 @@ def main(_):
         predict_batch_size=FLAGS.predict_batch_size)
     
     # Temp
-    processor = model_sentiments.FiQAProcessor()
+    processor = model_scores.FiQAProcessor()
     train_examples, eval_examples = processor.get_train_eval_examples(FLAGS.data_dir)
 
     """
@@ -150,10 +150,10 @@ def main(_):
         # later on. These do NOT count towards the metric (all tf.metrics
         # support a per-instance weight, and these get a weight of 0.0).
         while len(eval_examples) % FLAGS.eval_batch_size != 0:
-            eval_examples.append(model_sentiments.PaddingInputExample())
+            eval_examples.append(model_scores.PaddingInputExample())
 
     eval_file = os.path.join(FLAGS.output_dir, "eval.tf_record")
-    model_sentiments.file_based_convert_examples_to_features(
+    model_scores.file_based_convert_examples_to_features(
         eval_examples, FLAGS.max_seq_length, tokenizer, eval_file)
 
     tf.logging.info("***** Running evaluation *****")
@@ -171,7 +171,7 @@ def main(_):
         eval_steps = int(len(eval_examples) // FLAGS.eval_batch_size)
 
     eval_drop_remainder = True if FLAGS.use_tpu else False
-    eval_input_fn = model_sentiments.file_based_input_fn_builder(
+    eval_input_fn = model_scores.file_based_input_fn_builder(
         input_file=eval_file,
         seq_length=FLAGS.max_seq_length,
         is_training=False,
@@ -187,7 +187,7 @@ def main(_):
             writer.write("%s = %s\n" % (key, str(result[key])))
     """
     
-    processor = model_sentiments.FiQAProcessor()
+    processor = model_scores.FiQAProcessor()
     train_examples, eval_examples = processor.get_train_eval_examples(FLAGS.data_dir)
 
     predict_examples = train_examples[:1]
@@ -198,10 +198,10 @@ def main(_):
         # will get dropped. So we pad with fake examples which are ignored
         # later on.
         while len(predict_examples) % FLAGS.predict_batch_size != 0:
-            predict_examples.append(model_sentiments.PaddingInputExample())
+            predict_examples.append(model_scores.PaddingInputExample())
 
     predict_file = os.path.join(FLAGS.output_dir, "predict.tf_record")
-    model_sentiments.file_based_convert_examples_to_features(predict_examples,
+    model_scores.file_based_convert_examples_to_features(predict_examples,
                                             FLAGS.max_seq_length, tokenizer,
                                             predict_file)
 
@@ -212,7 +212,7 @@ def main(_):
     tf.logging.info("  Batch size = %d", FLAGS.predict_batch_size)
 
     predict_drop_remainder = True if FLAGS.use_tpu else False
-    predict_input_fn = model_sentiments.file_based_input_fn_builder(
+    predict_input_fn = model_scores.file_based_input_fn_builder(
         input_file=predict_file,
         seq_length=FLAGS.max_seq_length,
         is_training=False,
