@@ -263,17 +263,17 @@ def create_model(bert_config,
 
     hidden_size = output_layer.shape[-1].value
 
-    #output_weights = tf.get_variable(
+    # output_weights = tf.get_variable(
     #    "output_weights", [1, hidden_size],
     #    initializer=tf.truncated_normal_initializer(stddev=0.02))
 
-    #output_bias = tf.get_variable(
+    # output_bias = tf.get_variable(
     #    "output_bias", [1], initializer=tf.zeros_initializer())
 
-    with tf.variable_scope("loss"):
+    with tf.variable_scope("score/loss"):
         if is_training:
-            if (not (bert_config.hidden_dropout_prob == 0.0 
-                     and bert_config.attention_probs_dropout_prob == 0.0)): 
+            if (not (bert_config.hidden_dropout_prob == 0.0
+                     and bert_config.attention_probs_dropout_prob == 0.0)):
                 # I.e., 0.1 dropout
                 output_layer = tf.nn.dropout(output_layer, keep_prob=0.9)
             else:
@@ -282,26 +282,18 @@ def create_model(bert_config,
         logits = tf.layers.dense(output_layer,
                                  hidden_size,
                                  activation=tf.tanh)
-        
+
         logits = tf.layers.dense(logits,
                                  1,
                                  activation=None)
-        
+
         #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         #logits = tf.nn.bias_add(logits, output_bias)
 
         scores = logits  # tf.nn.tanh(logits)
 
-        per_example_loss = tf.square(scores - labels)
+        per_example_loss = tf.square(labels - scores)
         loss = tf.reduce_mean(per_example_loss)
-
-        #probabilities = tf.nn.softmax(logits, axis=-1)
-        #log_probs = tf.nn.log_softmax(logits, axis=-1)
-
-        #one_hot_labels = tf.one_hot(labels, depth=num_labels, dtype=tf.float32)
-
-        #per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
-        #loss = tf.reduce_mean(per_example_loss)
 
         return (loss, per_example_loss, scores)
 
@@ -354,15 +346,13 @@ def model_fn_builder(bert_config,
             else:
                 tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
 
-        """
-        tf.logging.info("**** Trainable Variables ****")
+        tf.logging.info("**** Trainable Variables Not Restored ****")
         for var in tvars:
             init_string = ""
-            if var.name in initialized_variable_names:
-                init_string = ", *INIT_FROM_CKPT*"
-            tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
-                            init_string)
-        """
+            if var.name not in initialized_variable_names:
+                #init_string = ", *INIT_FROM_CKPT*"
+                tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
+                                init_string)
 
         output_spec = None
         if mode == tf.estimator.ModeKeys.TRAIN:
