@@ -6,7 +6,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="-1"  
+#os.environ["CUDA_VISIBLE_DEVICES"]="-1"  
 
 import collections
 import json
