@@ -47,7 +47,7 @@ def run(flags):
 
     tf.gfile.MakeDirs(FLAGS.output_dir)
 
-    processor = processors.FiQAProcessor(FLAGS.data_dir)
+    processor = processors.FiQAPostsProcessor(FLAGS.data_dir)
 
     tokenizer = tokenization.FullTokenizer(
         vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)

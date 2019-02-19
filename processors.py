@@ -10,6 +10,7 @@ import os
 import collections
 import json
 import csv
+import re
 
 import bert.modeling as modeling
 import bert.optimization as optimization
@@ -39,7 +40,47 @@ class InputExample(object):
         self.label = label
 
 
-class FiQAProcessor(object):
+class FiQAPostsProcessor(object):
+
+    def __init__(self, data_dir, train_ratio=0.9):
+        self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_post_ABSA_train.json"))
+        num_train = int(round(len(self._data_dict) * train_ratio))
+        all_data = list(self._data_dict.items())
+        self._train_data_dict = dict(all_data[:num_train])
+        self._eval_data_dict = dict(all_data[num_train:])
+
+    def _read_json_file(self, input_file):
+        with tf.gfile.Open(input_file, "r") as f:
+            data_dict = json.load(f)
+            return data_dict
+        return None
+
+    def _create_examples(self, dict_data):
+        examples = []
+        for k, v in dict_data.items():
+            guid = k
+            sentence = tokenization.convert_to_unicode(v["sentence"])
+            # Remove URLS in sentence
+            sentence = re.sub(r'^https?:\/\/.*[\r\n]*', '', sentence)
+            infos = v["info"]
+
+            # We sum all the scores if we have more than 1 target
+            total_sentiment_score = 0.0
+            for info in infos:
+                total_sentiment_score += float(info["sentiment_score"])
+            sentiment_score = total_sentiment_score / float(len(infos))
+            examples.append(
+                InputExample(guid=guid, text_a=sentence, text_b=None, label=sentiment_score))
+        return examples
+
+    def get_train_examples(self):
+        return self._create_examples(self._train_data_dict)
+
+    def get_eval_examples(self):
+        return self._create_examples(self._eval_data_dict)
+
+
+class FiQAHeadlinesProcessor(object):
 
     def __init__(self, data_dir, train_ratio=0.9):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
@@ -75,6 +116,23 @@ class FiQAProcessor(object):
 
     def get_eval_examples(self):
         return self._create_examples(self._eval_data_dict)
+
+
+class FiQACombineProcessor(self):
+
+    def __init__(self, data_dir, train_ratio=0.9):
+        self._posts = FiQAPostsProcessor(data_dir, train_ratio)
+        self._headlines = FiQAHeadlinesProcessor(data_dir, train_ratio)
+
+    def get_train_examples(self):
+        examples = self._posts.get_train_examples()
+        examples.extend(self._headlines.get_train_examples())
+        return examples
+
+    def get_eval_examples(self):
+        examples = self._posts.get_eval_examples()
+        examples.extend(self._headlines.get_eval_examples())
+        return examples
 
 
 class DataProcessor(object):
