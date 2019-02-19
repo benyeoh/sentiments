@@ -186,7 +186,7 @@ class FiQAClassProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         eval_examples = self._processor.get_eval_examples()
         for example in eval_examples:
-            example.label = "1" if example.label > 0.0 else "0"
+            example.label = self.get_labels()[self._get_class(example.label)]
         return eval_examples
 
     #def get_test_examples(self, data_dir):
