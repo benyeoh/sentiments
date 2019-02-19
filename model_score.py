@@ -263,12 +263,12 @@ def create_model(bert_config,
 
     hidden_size = output_layer.shape[-1].value
 
-    output_weights = tf.get_variable(
-        "output_weights", [1, hidden_size],
-        initializer=tf.truncated_normal_initializer(stddev=0.02))
+    #output_weights = tf.get_variable(
+    #    "output_weights", [1, hidden_size],
+    #    initializer=tf.truncated_normal_initializer(stddev=0.02))
 
-    output_bias = tf.get_variable(
-        "output_bias", [1], initializer=tf.zeros_initializer())
+    #output_bias = tf.get_variable(
+    #    "output_bias", [1], initializer=tf.zeros_initializer())
 
     with tf.variable_scope("loss"):
         if (is_training and not
@@ -279,8 +279,16 @@ def create_model(bert_config,
         else:
             tf.logging.info("No dropout on final layer")
 
-        logits = tf.matmul(output_layer, output_weights, transpose_b=True)
-        logits = tf.nn.bias_add(logits, output_bias)
+        logits = tf.layers.dense(output_layer,
+                                 hidden_size,
+                                 activation=tf.tanh)
+        
+        logits = tf.layers.dense(logits,
+                                 1,
+                                 activation=tf.tanh)
+        
+        #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
+        #logits = tf.nn.bias_add(logits, output_bias)
 
         scores = logits  # tf.nn.tanh(logits)
 
