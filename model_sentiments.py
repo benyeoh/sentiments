@@ -341,7 +341,7 @@ def create_model(bert_config,
         logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         logits = tf.nn.bias_add(logits, output_bias)
 
-        sentiments = tf.nn.tanh(logits)
+        sentiments = logits#tf.nn.tanh(logits)
 
         per_example_loss = tf.square(sentiments - labels)
         loss = tf.reduce_mean(per_example_loss)
