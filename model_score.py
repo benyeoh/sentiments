@@ -380,9 +380,12 @@ def model_fn_builder(bert_config,
         elif mode == tf.estimator.ModeKeys.EVAL:
 
             def metric_fn(per_example_loss, is_real_example):
-                loss = tf.metrics.mean(values=per_example_loss, weights=is_real_example)
+                metrics_loss = tf.metrics.mean(values=per_example_loss, weights=is_real_example)
+                reduce_mean_loss = tf.reduce_mean(per_example_loss)
+
                 return {
-                    "eval_loss": loss,
+                    "eval_loss": metrics_loss,
+                    "loss": reduce_mean_loss
                 }
 
             eval_metrics = (metric_fn,
