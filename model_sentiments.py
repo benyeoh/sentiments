@@ -78,7 +78,7 @@ class FiQAProcessor(object):
 
     def _create_examples(self, dict_data):
         examples = []
-        for k, v in dict_data.iteritems():
+        for k, v in dict_data.items():
             guid = k
             sentence = tokenization.convert_to_unicode(v["sentence"])
             infos = v["info"]
