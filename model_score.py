@@ -285,7 +285,7 @@ def create_model(bert_config,
         
         logits = tf.layers.dense(logits,
                                  1,
-                                 activation=tf.tanh)
+                                 activation=None)
         
         #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         #logits = tf.nn.bias_add(logits, output_bias)
