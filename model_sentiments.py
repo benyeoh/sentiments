@@ -97,7 +97,7 @@ class FiQAProcessor(object):
 
         # Take 80-20 for train/eval
         num_train = int(round(len(data_dict) * train_ratio))
-        all_data = data_dict.items()
+        all_data = list(data_dict.items())
         train_data_dict = dict(all_data[:num_train])
         eval_data_dict = dict(all_data[num_train:])
 
