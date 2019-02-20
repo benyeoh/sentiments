@@ -184,7 +184,7 @@ def file_based_input_fn_builder(input_file, seq_length, is_training,
         "input_ids": tf.FixedLenFeature([seq_length], tf.int64),
         "input_mask": tf.FixedLenFeature([seq_length], tf.int64),
         "segment_ids": tf.FixedLenFeature([seq_length], tf.int64),
-        "labels": tf.FixedLenFeature([], tf.float32),
+        "labels": tf.FixedLenFeature([1], tf.float32),
         "is_real_example": tf.FixedLenFeature([], tf.int64),
     }
 
@@ -280,17 +280,17 @@ def create_model(bert_config,
                 tf.logging.info("No dropout on final layer")
 
         logits = tf.layers.dense(output_layer,
-                                 hidden_size,
+                                 1,
                                  activation=tf.tanh)
 
-        logits = tf.layers.dense(logits,
-                                 1,
-                                 activation=None)
+        #logits = tf.layers.dense(logits,
+        #                         1,
+        #                         activation=None)
 
         #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         #logits = tf.nn.bias_add(logits, output_bias)
 
-        scores = tf.reshape(logits, [-1])  # tf.nn.tanh(logits)
+        scores = logits #tf.reshape(logits, [-1])  # tf.nn.tanh(logits)
 
         per_example_loss = tf.square(labels - scores)
         loss = tf.reduce_mean(per_example_loss)
