@@ -290,7 +290,7 @@ def create_model(bert_config,
         #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         #logits = tf.nn.bias_add(logits, output_bias)
 
-        scores = logits  # tf.nn.tanh(logits)
+        scores = tf.reshape(logits, [-1])  # tf.nn.tanh(logits)
 
         per_example_loss = tf.square(labels - scores)
         loss = tf.reduce_mean(per_example_loss)
