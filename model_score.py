@@ -280,12 +280,12 @@ def create_model(bert_config,
                 tf.logging.info("No dropout on final layer")
 
         logits = tf.layers.dense(output_layer,
+                                 hidden_size,
+                                 activation=tf.tanh)
+
+        logits = tf.layers.dense(logits,
                                  1,
                                  activation=None)
-
-        #logits = tf.layers.dense(logits,
-        #                         1,
-        #                         activation=None)
 
         #logits = tf.matmul(output_layer, output_weights, transpose_b=True)
         #logits = tf.nn.bias_add(logits, output_bias)
