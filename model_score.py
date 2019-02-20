@@ -281,7 +281,7 @@ def create_model(bert_config,
 
         logits = tf.layers.dense(output_layer,
                                  1,
-                                 activation=tf.tanh)
+                                 activation=None)
 
         #logits = tf.layers.dense(logits,
         #                         1,
