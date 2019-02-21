@@ -11,12 +11,14 @@ import collections
 import json
 import csv
 import re
+import random
 
 import bert.modeling as modeling
 import bert.optimization as optimization
 import bert.tokenization as tokenization
 
 import tensorflow as tf
+from numpy.ma.core import negative
 
 
 class InputExample(object):
@@ -46,6 +48,7 @@ class FiQAPostsProcessor(object):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_post_ABSA_train.json"))
         num_train = int(round(len(self._data_dict) * train_ratio))
         all_data = list(self._data_dict.items())
+        random.shuffle(all_data)
         self._train_data_dict = dict(all_data[:num_train])
         self._eval_data_dict = dict(all_data[num_train:])
 
@@ -86,6 +89,7 @@ class FiQAHeadlinesProcessor(object):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
         num_train = int(round(len(self._data_dict) * train_ratio))
         all_data = list(self._data_dict.items())
+        random.shuffle(all_data)
         self._train_data_dict = dict(all_data[:num_train])
         self._eval_data_dict = dict(all_data[num_train:])
 
@@ -127,11 +131,13 @@ class FiQACombineProcessor(object):
     def get_train_examples(self):
         examples = self._posts.get_train_examples()
         examples.extend(self._headlines.get_train_examples())
+        random.shuffle(examples)
         return examples
 
     def get_eval_examples(self):
         examples = self._posts.get_eval_examples()
         examples.extend(self._headlines.get_eval_examples())
+        random.shuffle(examples)
         return examples
 
 
@@ -174,9 +180,9 @@ class FiQAClassProcessor(DataProcessor):
     def _get_class(self, val):
         for i, x in enumerate(self._class):
             if val < x:
-                return i        
+                return i
         return len(self._class)
-        
+
     def get_train_examples(self, data_dir):
         train_examples = self._processor.get_train_examples()
         for example in train_examples:
@@ -189,13 +195,70 @@ class FiQAClassProcessor(DataProcessor):
             example.label = self.get_labels()[self._get_class(example.label)]
         return eval_examples
 
-    #def get_test_examples(self, data_dir):
+    # def get_test_examples(self, data_dir):
     #    return self._get_dev_examples(data_dir)
 
     def get_labels(self):
         return [str(i) for i in range(len(self._class) + 1)]
 
-    
+
+class FinPBProcessor(DataProcessor):
+
+    def __init__(self, data_dir, train_ratio=0.9):
+        #_100 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_AllAgree.txt'))
+        #_75 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_75Agree.txt'))
+        #_66 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_66Agree.txt'))
+        sentences = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_50Agree.txt'))
+        random.shuffle(sentences)
+        num_train = int(round(len(sentences) * train_ratio))
+        self._train = sentences[:num_train]
+        self._eval = sentences[num_train:]
+
+    def _parse_txt(self, filepath):
+        with tf.gfile.Open(filepath, "r") as f:
+            sentences = []
+            for line in f:
+                sentence = None
+                label_id = "0"
+                if '@positive' in line:
+                    label_id = "2"
+                    sentence = line[:line.index('@positive')]
+                elif '@neutral' in line:
+                    label_id = "1"
+                    sentence = line[:line.index('@neutral')]
+                else:
+                    assert '@negative' in line
+                    sentence = line[:line.index('@negative')]
+                sentences.append((sentence, label_id))
+            return sentences
+        return None
+
+    def get_train_examples(self, data_dir):
+        return self._create_examples(self._train, "train")
+
+    def get_dev_examples(self, data_dir):
+        return self._create_examples(self._eval, "dev")
+
+    def get_labels(self):
+        """See base class."""
+        return ["0", "1", "2"]
+
+    def _create_examples(self, sentences, set_type):
+        """Creates examples for the training and dev sets."""
+        examples = []
+        for i, (sentence, label_id) in enumerate(sentences):
+            guid = "%s-%s" % (set_type, i)
+            text_a = tokenization.convert_to_unicode(sentence)
+            text_b = None
+            if set_type == "test":
+                label = "0"
+            else:
+                label = label_id
+            examples.append(
+                InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+        return examples
+
+
 class SSTProcessor(DataProcessor):
 
     def get_train_examples(self, data_dir):
