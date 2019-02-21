@@ -215,7 +215,7 @@ class FinPBProcessor(DataProcessor):
         self._eval = sentences[num_train:]
 
     def _parse_txt(self, filepath):
-        with tf.gfile.Open(filepath, "rb") as f:
+        with tf.gfile.Open(filepath, "r") as f:
             sentences = []
             for line in f:
                 sentence = None
