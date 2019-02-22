@@ -215,9 +215,10 @@ class FinPBProcessor(DataProcessor):
 
     def __init__(self, data_dir, train_ratio=0.9, seed=_SEED):
         #_100 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_AllAgree.txt'))
-        #_75 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_75Agree.txt'))
+        _75 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_75Agree.txt'))
         #_66 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_66Agree.txt'))
-        sentences = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_50Agree.txt'))
+        #sentences = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_50Agree.txt'))
+        sentences = _75
         random.seed(seed)
         random.shuffle(sentences)
         num_train = int(round(len(sentences) * train_ratio))
