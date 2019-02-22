@@ -19,6 +19,10 @@ import bert.tokenization as tokenization
 
 import tensorflow as tf
 from numpy.ma.core import negative
+from random import seed
+
+
+_SEED = 3509843095
 
 
 class InputExample(object):
@@ -44,10 +48,11 @@ class InputExample(object):
 
 class FiQAPostsProcessor(object):
 
-    def __init__(self, data_dir, train_ratio=0.9):
+    def __init__(self, data_dir, train_ratio=0.9, seed=_SEED):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_post_ABSA_train.json"))
         num_train = int(round(len(self._data_dict) * train_ratio))
         all_data = list(self._data_dict.items())
+        random.seed(seed)
         random.shuffle(all_data)
         self._train_data_dict = dict(all_data[:num_train])
         self._eval_data_dict = dict(all_data[num_train:])
@@ -85,10 +90,11 @@ class FiQAPostsProcessor(object):
 
 class FiQAHeadlinesProcessor(object):
 
-    def __init__(self, data_dir, train_ratio=0.9):
+    def __init__(self, data_dir, train_ratio=0, seed=_SEED):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
         num_train = int(round(len(self._data_dict) * train_ratio))
         all_data = list(self._data_dict.items())
+        random.seed(_SEED)
         random.shuffle(all_data)
         self._train_data_dict = dict(all_data[:num_train])
         self._eval_data_dict = dict(all_data[num_train:])
@@ -124,19 +130,22 @@ class FiQAHeadlinesProcessor(object):
 
 class FiQACombineProcessor(object):
 
-    def __init__(self, data_dir, train_ratio=0.9):
-        self._posts = FiQAPostsProcessor(data_dir, train_ratio)
-        self._headlines = FiQAHeadlinesProcessor(data_dir, train_ratio)
+    def __init__(self, data_dir, train_ratio=0.9, seed=_SEED):
+        self._posts = FiQAPostsProcessor(data_dir, train_ratio, seed=seed)
+        self._headlines = FiQAHeadlinesProcessor(data_dir, train_ratio, seed=seed)
+        self._seed = seed
 
     def get_train_examples(self):
         examples = self._posts.get_train_examples()
         examples.extend(self._headlines.get_train_examples())
+        random.seed(self._seed)
         random.shuffle(examples)
         return examples
 
     def get_eval_examples(self):
         examples = self._posts.get_eval_examples()
         examples.extend(self._headlines.get_eval_examples())
+        random.seed(self._seed)
         random.shuffle(examples)
         return examples
 
@@ -204,11 +213,12 @@ class FiQAClassProcessor(DataProcessor):
 
 class FinPBProcessor(DataProcessor):
 
-    def __init__(self, data_dir, train_ratio=0.9):
+    def __init__(self, data_dir, train_ratio=0.9, seed=_SEED):
         #_100 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_AllAgree.txt'))
         #_75 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_75Agree.txt'))
         #_66 = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_66Agree.txt'))
         sentences = self._parse_txt(os.path.join(data_dir, 'financial_phrasebank', 'Sentences_50Agree.txt'))
+        random.seed(seed)
         random.shuffle(sentences)
         num_train = int(round(len(sentences) * train_ratio))
         self._train = sentences[:num_train]
