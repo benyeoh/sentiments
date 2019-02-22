@@ -3,8 +3,6 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import json
-
 import bert.modeling as modeling
 import bert.tokenization as tokenization
 import tensorflow as tf
@@ -236,8 +234,8 @@ def run_classifier(flags, processor):
 
     output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
     with tf.gfile.GFile(output_eval_file, "w") as writer:
-        res_json = json.dumps(result, sort_keys=True, indent=4, separators=(',', ': '))        
         tf.logging.info("***** Eval results *****")
-        tf.logging.info(res_json)
-        writer.write(res_json)
+        for key in sorted(result.keys()):
+            tf.logging.info("  %s = %s", key, str(result[key]))
+            writer.write("%s = %s\n" % (key, str(result[key])))
     
