@@ -8,6 +8,8 @@ from __future__ import division
 from __future__ import print_function
 
 import os
+import json
+
 import bert.modeling as modeling
 import bert.tokenization as tokenization
 import tensorflow as tf
@@ -168,12 +170,12 @@ def run(flags):
 
     result = estimator.evaluate(input_fn=eval_input_fn, steps=eval_steps)
 
-    output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
+    output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.json")
     with tf.gfile.GFile(output_eval_file, "w") as writer:
+        res_json = json.dumps(result, sort_keys=True, indent=4, separators=(',', ': '))        
         tf.logging.info("***** Eval results *****")
-        for key in sorted(result.keys()):
-            tf.logging.info("  %s = %s", key, str(result[key]))
-            writer.write("%s = %s\n" % (key, str(result[key])))
+        tf.logging.info(res_json)
+        writer.write(res_json)
 
     '''
     if FLAGS.do_predict:
