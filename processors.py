@@ -90,7 +90,7 @@ class FiQAPostsProcessor(object):
 
 class FiQAHeadlinesProcessor(object):
 
-    def __init__(self, data_dir, train_ratio=0, seed=_SEED):
+    def __init__(self, data_dir, train_ratio=0.9, seed=_SEED):
         self._data_dict = self._read_json_file(os.path.join(data_dir, "FiQA_ABSA", "task1_headline_ABSA_train.json"))
         num_train = int(round(len(self._data_dict) * train_ratio))
         all_data = list(self._data_dict.items())
