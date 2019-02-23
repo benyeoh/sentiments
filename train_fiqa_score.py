@@ -219,8 +219,7 @@ def run(flags):
         assert num_written_lines == num_actual_predict_examples
     '''
 
-def save_improvement(output_dir, res):
-    save_output_dir = os.path.join(output_dir, 'save')
+def save_improvement(output_dir, save_output_dir, res):
     train_common.compare_eval_save_model(
         res, output_dir, lambda x, y: x["eval_loss"] < y["eval_loss"], "eval_loss", save_output_dir)
 
@@ -228,8 +227,7 @@ def save_improvement(output_dir, res):
 def main(_):
     flags = tf.app.flags.FLAGS.flag_values_dict()
     res = run(flags)
-    save(flags["output_dir"], res)
-
+    save_improvement(flags["output_dir"], os.path.join(flags["output_dir"], 'save'), res)
 
 
 if __name__ == "__main__":

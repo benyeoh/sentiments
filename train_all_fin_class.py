@@ -5,6 +5,7 @@
 
 import random
 
+import os
 import processors
 import train_common
 
@@ -42,8 +43,7 @@ def run(flags):
     return train_common.run_classifier(flags, processor)
 
 
-def save_improvement(output_dir, res):
-    save_output_dir = os.path.join(output_dir, 'save')
+def save_improvement(output_dir, save_output_dir, res):
     train_common.compare_eval_save_model(
         res, output_dir, lambda x, y: x["eval_accuracy"] > y["eval_accuracy"], "eval_accuracy", save_output_dir)
 
@@ -51,7 +51,7 @@ def save_improvement(output_dir, res):
 def main(_):
     flags = tf.app.flags.FLAGS.flag_values_dict()
     res = run(flags)
-    save(flags["output_dir"], res)
+    save_improvement(flags["output_dir"], os.path.join(flags["output_dir"], 'save'), res)
 
 
 if __name__ == "__main__":
