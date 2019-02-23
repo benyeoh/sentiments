@@ -23,7 +23,7 @@ def run(flags):
         fiqa_processor = processors.FiQAPostsProcessor(flags["data_dir"])
         
     processor = processors.FiQAClassProcessor(fiqa_processor, class_separation=[-0.1, 0.1])
-    train_common.run_classifier(flags, processor)
+    return train_common.run_classifier(flags, processor)
 
 
 def main(_):

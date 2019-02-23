@@ -39,11 +39,16 @@ def run(flags):
             return ["0", "1", "2"]
 
     processor = AllFinClassProcessor(data_dir=flags["data_dir"])
-    train_common.run_classifier(flags, processor)
+    return train_common.run_classifier(flags, processor)
 
 
 def main(_):
-    run(tf.app.flags.FLAGS.flag_values_dict())
+    flags = tf.app.flags.FLAGS.flag_values_dict()
+    res = run(flags)
+
+    save_output_dir = os.path.join(flags["output_dir"], 'save')
+    train_common.compare_eval_save_model(
+        res, flags["output_dir"], lambda x, y: x["eval_accuracy"] > y["eval_accuracy"], "eval_accuracy", save_output_dir)
 
 
 if __name__ == "__main__":

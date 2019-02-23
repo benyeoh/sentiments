@@ -27,10 +27,11 @@ tf.flags.DEFINE_bool("use_posts", True, "Posts data.")
 def run(flags):
     # I'm lazy
     class AttrDict(dict):
+
         def __init__(self, *args, **kwargs):
             super(AttrDict, self).__init__(*args, **kwargs)
             self.__dict__ = self
-            
+
     FLAGS = AttrDict()
     FLAGS.update(flags)
 
@@ -59,8 +60,8 @@ def run(flags):
     elif FLAGS.use_headlines:
         processor = processors.FiQAHeadlinesProcessor(FLAGS.data_dir)
     else:
-        processor = processors.FiQAPostsProcessor(FLAGS.data_dir)        
-        
+        processor = processors.FiQAPostsProcessor(FLAGS.data_dir)
+
     tokenizer = tokenization.FullTokenizer(
         vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)
 
@@ -85,7 +86,7 @@ def run(flags):
     num_warmup_steps = None
 
     train_examples = processor.get_train_examples()
-    
+
     if FLAGS.debug_examples:
         train_examples = train_examples[:8]
 
@@ -167,13 +168,8 @@ def run(flags):
         drop_remainder=eval_drop_remainder)
 
     result = estimator.evaluate(input_fn=eval_input_fn, steps=eval_steps)
-
-    output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
-    with tf.gfile.GFile(output_eval_file, "w") as writer:
-        tf.logging.info("***** Eval results *****")
-        for key in sorted(result.keys()):
-            tf.logging.info("  %s = %s", key, str(result[key]))
-            writer.write("%s = %s\n" % (key, str(result[key])))
+    train_common.write_eval_results(result, FLAGS.output_dir)
+    return result
 
     '''
     if FLAGS.do_predict:
@@ -225,7 +221,12 @@ def run(flags):
 
 
 def main(_):
-    run(tf.app.flags.FLAGS.flag_values_dict())
+    flags = tf.app.flags.FLAGS.flag_values_dict()
+    res = run(flags)
+
+    save_output_dir = os.path.join(flags["output_dir"], 'save')
+    train_common.compare_eval_save_model(
+        res, flags["output_dir"], lambda x, y: x["eval_loss"] < y["eval_loss"], "eval_loss", save_output_dir)
 
 
 if __name__ == "__main__":

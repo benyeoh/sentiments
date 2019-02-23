@@ -11,7 +11,7 @@ import tensorflow as tf
 
 def run(flags):
     processor = processors.FinPBProcessor(flags["data_dir"])
-    train_common.run_classifier(flags, processor)
+    return train_common.run_classifier(flags, processor)
 
 
 def main(_):

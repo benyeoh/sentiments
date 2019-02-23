@@ -9,6 +9,7 @@ import tensorflow as tf
 
 import model_classifier
 import processors
+import new
 
 
 # Required parameters
@@ -23,7 +24,7 @@ tf.flags.DEFINE_string(
     "This specifies the model architecture.")
 
 tf.flags.DEFINE_string("vocab_file", "bert_models/uncased_L-12_H-768_A-12/vocab.txt",
-                    "The vocabulary file that the BERT model was trained on.")
+                       "The vocabulary file that the BERT model was trained on.")
 
 tf.flags.DEFINE_string(
     "output_dir", "tmp/sentiments/",
@@ -55,7 +56,7 @@ tf.flags.DEFINE_integer("predict_batch_size", 8, "Total batch size for predict."
 tf.flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for Adam.")
 
 tf.flags.DEFINE_float("num_train_epochs", 3.0,
-                   "Total number of training epochs to perform.")
+                      "Total number of training epochs to perform.")
 
 tf.flags.DEFINE_float(
     "warmup_proportion", 0.1,
@@ -63,10 +64,10 @@ tf.flags.DEFINE_float(
     "E.g., 0.1 = 10% of training.")
 
 tf.flags.DEFINE_integer("save_checkpoints_steps", 1000,
-                     "How often to save the model checkpoint.")
+                        "How often to save the model checkpoint.")
 
 tf.flags.DEFINE_integer("iterations_per_loop", 1000,
-                     "How many steps to make in each estimator call.")
+                        "How many steps to make in each estimator call.")
 
 tf.flags.DEFINE_bool("use_tpu", False, "Whether to use TPU or GPU/CPU.")
 
@@ -97,15 +98,70 @@ tf.flags.DEFINE_integer(
 tf.flags.DEFINE_bool("use_dropout", True, "Whether to use dropout.")
 
 
+def write_eval_results(result, output_dir):
+    output_eval_file = os.path.join(output_dir, "eval_results.txt")
+    with tf.gfile.GFile(output_eval_file, "w") as writer:
+        tf.logging.info("***** Eval results *****")
+        for key in sorted(result.keys()):
+            tf.logging.info("  %s = %s", key, str(result[key]))
+            writer.write("%s = %s\n" % (key, str(result[key])))
+
+
+def read_eval_results(output_dir):
+    output_eval_file = os.path.join(output_dir, "eval_results.txt")
+    if tf.gfile.Exists(output_eval_file):
+        with tf.gfile.GFile(output_eval_file, "r") as reader:
+            res = {}
+            for line in reader:
+                key_val = line.split(' = ')
+                key = key_val[0]
+                val = key_val[1]
+                try:
+                    val = int(val)
+                except ValueError:
+                    try:
+                        val = float(val)
+                    except ValueError:
+                        pass
+                res[key] = val
+            return res
+    return None
+
+
+def compare_eval_save_model(new, output_dir, compare_fn, compare_key, save_output_dir):
+
+    prev = read_eval_results(save_output_dir)
+    if prev is None or (compare_fn(new, prev)):
+        new_save_output_dir = os.path.join(save_output_dir, '%s_%f' % (compare_key, new[compare_key]))
+        tf.gfile.MakeDirs(new_save_output_dir)
+
+        tf.logging.info("We found a better result. New: %f" % (new[compare_key]))
+        tf.logging.info("Saving checkpoint files to %s" % (new_save_output_dir))
+
+        num_global_steps = new["global_step"]
+        model_name = 'model.ckpt-%d' % num_global_steps
+        filenames = [model_name + '.data-00000-of-00001',
+                     model_name + '.index',
+                     model_name + '.meta']
+
+        for filename in filenames:
+            from_path = os.path.join(output_dir, filename)
+            to_path = os.path.join(new_save_output_dir, filename)
+            tf.gfile.Copy(from_path, to_path)
+
+        write_eval_results(new, save_output_dir)
+
+
 def run_classifier(flags, processor):
     # I'm lazy
     class AttrDict(dict):
+
         def __init__(self, *args, **kwargs):
             super(AttrDict, self).__init__(*args, **kwargs)
             self.__dict__ = self
-            
+
     FLAGS = AttrDict()
-    FLAGS.update(flags)    
+    FLAGS.update(flags)
 
     tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -126,7 +182,7 @@ def run_classifier(flags, processor):
             (FLAGS.max_seq_length, bert_config.max_position_embeddings))
 
     tf.gfile.MakeDirs(FLAGS.output_dir)
-    
+
     label_list = processor.get_labels()
 
     tokenizer = tokenization.FullTokenizer(
@@ -231,11 +287,5 @@ def run_classifier(flags, processor):
         drop_remainder=eval_drop_remainder)
 
     result = estimator.evaluate(input_fn=eval_input_fn, steps=eval_steps)
-
-    output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
-    with tf.gfile.GFile(output_eval_file, "w") as writer:
-        tf.logging.info("***** Eval results *****")
-        for key in sorted(result.keys()):
-            tf.logging.info("  %s = %s", key, str(result[key]))
-            writer.write("%s = %s\n" % (key, str(result[key])))
-    
+    write_eval_results(result, FLAGS.output_dir)
+    return result
