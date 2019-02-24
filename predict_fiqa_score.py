@@ -17,18 +17,20 @@ import processors
 import predict_score
 
 
+tf.flags.DEFINE_bool("use_headlines", True, "Headlines data.")
+
+tf.flags.DEFINE_bool("use_posts", True, "Posts data.")
+
+
 def run(flags):
     def _get_predict_examples(predict_flags):
-        predict_path = os.path.join(predict_flags.data_dir, "predict.txt")
-        with tf.gfile.GFile(predict_path, "r") as reader:
-            examples = []
-            for i, line in enumerate(reader):
-                sentence = tokenization.convert_to_unicode(line)
-                # Remove URLS in sentence
-                sentence = re.sub(r'http\S+', '', sentence)
-                examples.append(
-                    processors.InputExample(guid=i, text_a=sentence, text_b=None, label=0.0))
-            return examples    
+        if predict_flags.use_headlines and predict_flags.use_posts:
+            processor = processors.FiQACombineProcessor(predict_flags.data_dir)
+        elif predict_flags.use_headlines:
+            processor = processors.FiQAHeadlinesProcessor(predict_flags.data_dir)
+        else:
+            processor = processors.FiQAPostsProcessor(predict_flags.data_dir)
+        return processor.get_eval_examples()        
     return predict_score.predict_score(flags, _get_predict_examples)
 
 
