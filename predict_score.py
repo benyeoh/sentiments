@@ -170,19 +170,23 @@ def predict_score(flags, get_predict_examples):
         drop_remainder=predict_drop_remainder)
 
     result = estimator.predict(input_fn=predict_input_fn)
+    all_results = []
+    for (i, prediction) in enumerate(result):
+        score = prediction["scores"]
+        text = predict_examples[i].text_a
+        all_results.append((text, score))
+        if i >= num_actual_predict_examples:
+            break
 
     output_predict_file = os.path.join(FLAGS.output_dir, "predict_results.tsv")
     with tf.gfile.GFile(output_predict_file, "w") as writer:
         num_written_lines = 0
         tf.logging.info("***** Predict results *****")
-        for (i, prediction) in enumerate(result):
-            score = prediction["scores"]
-            text = predict_examples[i].text_a
-            if i >= num_actual_predict_examples:
-                break
+        for (text, score) in all_results:
             output_line = "\t".join([text, str(score)]) + "\n"
             tf.logging.info("  " + output_line)
             writer.write(output_line)
             num_written_lines += 1
     assert num_written_lines == num_actual_predict_examples
-    return result
+    return all_results
+

@@ -22,14 +22,21 @@
     ]
   },
   "8": {
-    "sentence": "UPDATE 1-Dairy Crest loses a third of Morrisons milk contract",
+    "sentence": "Dairy Crest loses a third of Morrisons milk contract",
     "info": [
       {
         "snippets": "['Crest loses a third of Morrisons milk contract']",
         "target": "Morrisons",
         "sentiment_score": "-0.161",
         "aspects": "['Corporate/Sales/Failed Contract Discussion']"
+      },
+      {
+        "snippets": "['Crest loses a third of Morrisons milk contract']",
+        "target": "Dairy Crest",
+        "sentiment_score": "-0.211",
+        "aspects": "['Corporate/Sales/Failed Contract Discussion']"
       }
+
     ]
   },
   "22": {
@@ -38,9 +45,16 @@
       {
         "snippets": "['hires Aviva's David Hillier for multi-asset team']",
         "target": "Insight",
-        "sentiment_score": "0.137",
+        "sentiment_score": "0.04",
+        "aspects": "['Corporate/Appointment/Executive Appointment']"
+      },
+      {
+        "snippets": "['hires Aviva's David Hillier for multi-asset team']",
+        "target": "Aviva",
+        "sentiment_score": "-0.02",
         "aspects": "['Corporate/Appointment/Executive Appointment']"
       }
+
     ]
   },
   "30": {
@@ -55,7 +69,7 @@
     ]
   },
   "31": {
-    "sentence": "UPDATE 1-Pearson expects to grow this year after solid end to 2014",
+    "sentence": "Pearson expects to grow this year after solid end to 2014",
     "info": [
       {
         "snippets": "['to grow this year after solid end to 2014']",
@@ -79,7 +93,14 @@
         "target": "Tesco",
         "sentiment_score": "0.192",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['sells Blinkbox and broadband service to']",
+        "target": "Blinkbox",
+        "sentiment_score": "0.0",
+        "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "36": {
@@ -88,7 +109,7 @@
       {
         "snippets": "['despite sales slump']",
         "target": "Unilever",
-        "sentiment_score": "0.213",
+        "sentiment_score": "0.253",
         "aspects": "['Corporate/Sales']"
       }
     ]
@@ -100,6 +121,12 @@
         "snippets": "['Tesco leads leap in FTSE 100; ']",
         "target": "Tesco",
         "sentiment_score": "0.389",
+        "aspects": "['Stock/Technical Analysis/Trend/Trending up']"
+      },             
+      {
+        "snippets": "['Tesco leads leap in FTSE 100; ']",
+        "target": "Marks & Spencer",
+        "sentiment_score": "-0.287",
         "aspects": "['Stock/Technical Analysis/Trend/Trending up']"
       }
     ]
@@ -121,9 +148,16 @@
       {
         "snippets": "['Shire's Deal for NPS']",
         "target": "Shire",
-        "sentiment_score": "0.195",
+        "sentiment_score": "0.101",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Shire's Deal for NPS']",
+        "target": "NPS",
+        "sentiment_score": "0.174",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "48": {
@@ -132,6 +166,12 @@
       {
         "snippets": "['Group Sign Memo of Understanding ..']",
         "target": "China Merchants Group",
+        "sentiment_score": "0.119",
+        "aspects": "['Corporate/Strategy/Company Agreement']"
+      },
+      {
+        "snippets": "['Group Sign Memo of Understanding ..']",
+        "target": "Carnival Corporation",
         "sentiment_score": "0.119",
         "aspects": "['Corporate/Strategy/Company Agreement']"
       }
@@ -162,7 +202,14 @@
         "target": "EasyJet",
         "sentiment_score": "0.329",
         "aspects": "['Corporate/Sales/Sales']"
+      },
+      {
+        "snippets": "['rise at EasyJet and Aer Lingus']",
+        "target": "Aer Lingus",
+        "sentiment_score": "0.329",
+        "aspects": "['Corporate/Sales/Sales']"
       }
+
     ]
   },
   "55": {
@@ -188,9 +235,16 @@
       {
         "snippets": "['validating Shire takeover deal']",
         "target": "Shire",
+        "sentiment_score": "0.218",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['validating Shire takeover deal']",
+        "target": "NPS",
         "sentiment_score": "0.332",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "60": {
@@ -220,14 +274,14 @@
     "info": [
       {
         "snippets": "['share price dips']",
-        "target": "Blinkbox",
+        "target": "Blinkbox Books",
         "sentiment_score": "-0.357",
         "aspects": "['Stock/Price Action']"
       },
       {
         "snippets": "['Tesco share price dips']",
         "target": "Tesco",
-        "sentiment_score": "-0.389",
+        "sentiment_score": "-0.489",
         "aspects": "['Stock/Price Action/Volatility']"
       }
     ]
@@ -240,7 +294,14 @@
         "target": "Shire",
         "sentiment_score": "0.235",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Shire to buy NPS for $5.2 billion to boost rare disease drugs']",
+        "target": "NPS",
+        "sentiment_score": "0.321",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "76": {
@@ -250,6 +311,12 @@
         "snippets": "['Licensing Deal With Omnis Pharmaceuticals']",
         "target": "Omnis Pharmaceuticals",
         "sentiment_score": "0.295",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Licensing Deal With Omnis Pharmaceuticals']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.281",
         "aspects": "['Corporate/Sales/Deal']"
       }
     ]
@@ -284,7 +351,14 @@
         "target": "IAG",
         "sentiment_score": "0.12",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['IAG can pay more for Aer Lingus']",
+        "target": "Aer Lingus",
+        "sentiment_score": "0.197",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "88": {
@@ -304,9 +378,16 @@
       {
         "snippets": "['concrete bid for Holcim Lafarge assets']",
         "target": "Holcim Lafarge",
-        "sentiment_score": "0.282",
+        "sentiment_score": "0.332",
+        "aspects": "['Stock/Signal/Buy Signal']"
+      },
+      {
+        "snippets": "['concrete bid for Holcim Lafarge assets']",
+        "target": "CRH",
+        "sentiment_score": "0.145",
         "aspects": "['Stock/Signal/Buy Signal']"
       }
+
     ]
   },
   "94": {
@@ -343,7 +424,7 @@
     ]
   },
   "99": {
-    "sentence": "UPDATE 1-Meggitt reiterates annual outlook after tough 2014",
+    "sentence": "Meggitt reiterates annual outlook after tough 2014",
     "info": [
       {
         "snippets": "['reiterates annual outlook after tough 2014']",
@@ -376,7 +457,7 @@
     ]
   },
   "107": {
-    "sentence": "REFILE-UPDATE 4-Britain's Lloyds to pay first dividend since rescue",
+    "sentence": "Britain's Lloyds to pay first dividend since rescue",
     "info": [
       {
         "snippets": "['to pay first dividend since rescue']",
@@ -392,9 +473,16 @@
       {
         "snippets": "['set to complete $20 billion Novartis asset swap next week']",
         "target": "Novartis",
+        "sentiment_score": "0.262",
+        "aspects": "['Corporate/M&A']"
+      },
+      {
+        "snippets": "['set to complete $20 billion Novartis asset swap next week']",
+        "target": "GlaxoSmithKline",
         "sentiment_score": "0.189",
         "aspects": "['Corporate/M&A']"
       }
+
     ]
   },
   "116": {
@@ -436,9 +524,16 @@
       {
         "snippets": "['Farms CEO Connolly to Top Pos']",
         "target": "ConAgra",
-        "sentiment_score": "0.101",
+        "sentiment_score": "0.03",
+        "aspects": "['Corporate/Appointment']"
+      },
+      {
+        "snippets": "['Farms CEO Connolly to Top Pos']",
+        "target": "HillShire Farms",
+        "sentiment_score": "0.0",
         "aspects": "['Corporate/Appointment']"
       }
+
     ]
   },
   "129": {
@@ -460,7 +555,14 @@
         "target": "Lonmin",
         "sentiment_score": "-0.314",
         "aspects": "['Corporate/Strategy/Divestment']"
+      },
+      {
+        "snippets": "['Cuts 2015 Budget, Plans To Divest From Lonmin']",
+        "target": "Glencore",
+        "sentiment_score": "-0.299",
+        "aspects": "['Corporate/Strategy/Divestment']"
       }
+
     ]
   },
   "135": {
@@ -493,7 +595,20 @@
         "target": "Royal Dutch Shell",
         "sentiment_score": "-0.402",
         "aspects": "['Corporate/Risks']"
+      },
+      {
+        "snippets": "['fail to find reserves']",
+        "target": "Chevron",
+        "sentiment_score": "-0.402",
+        "aspects": "['Corporate/Risks']"
+      },
+      {
+        "snippets": "['fail to find reserves']",
+        "target": "BP",
+        "sentiment_score": "-0.402",
+        "aspects": "['Corporate/Risks']"
       }
+
     ]
   },
   "153": {
@@ -513,26 +628,34 @@
       {
         "snippets": "['Insurer buys advice firm Pearson Jones']",
         "target": "Standard Life",
-        "sentiment_score": "0.364",
+        "sentiment_score": "0.292",
+        "aspects": "['Corporate/Strategy/Corporate Planning']"
+      },
+      {
+        "snippets": "['Insurer buys advice firm Pearson Jones']",
+        "target": "Pearson Jones",
+        "sentiment_score": "0.314",
         "aspects": "['Corporate/Strategy/Corporate Planning']"
       }
+
     ]
   },
   "158": {
     "sentence": "Tesco closes in on new chairman with Dixons Carphone's John Allan in the frame",
     "info": [
       {
-        "snippets": "['closes in on new chairman']",
-        "target": "Dixons Carphone",
-        "sentiment_score": "0.129",
-        "aspects": "['Corporate/Appointment']"
+        "snippets": "['new chairman with Dixons Carphone's']",
+        "target": "Tesco",
+        "sentiment_score": "0.01",
+        "aspects": "['Corporate/Appointment/Staff Hiring']"
       },
       {
         "snippets": "['new chairman with Dixons Carphone's']",
-        "target": "Tesco",
-        "sentiment_score": "0.295",
+        "target": "Dixons Carphone",
+        "sentiment_score": "-0.01",
         "aspects": "['Corporate/Appointment/Staff Hiring']"
       }
+
     ]
   },
   "159": {
@@ -552,7 +675,7 @@
       {
         "snippets": "['reportedly appoint Howard Davies as its next chairman']",
         "target": "RBS",
-        "sentiment_score": "0.089",
+        "sentiment_score": "0.035",
         "aspects": "['Corporate/Appointment']"
       }
     ]
@@ -602,14 +725,21 @@
     ]
   },
   "182": {
-    "sentence": "TRLPC - CRH backs Lafarge Holcim asset buy with 6.5 bln euro bridge loan",
+    "sentence": "CRH backs Lafarge Holcim asset buy with 6.5 bln euro bridge loan",
     "info": [
       {
         "snippets": "['CRH backs Lafarge Holcim asset buy']",
         "target": "Lafarge Holcim",
         "sentiment_score": "0.365",
         "aspects": "['Corporate/Strategy/Share Buyback']"
+      },
+      {
+        "snippets": "['CRH backs Lafarge Holcim asset buy']",
+        "target": "CRH",
+        "sentiment_score": "0.221",
+        "aspects": "['Corporate/Strategy/Share Buyback']"
       }
+
     ]
   },
   "183": {
@@ -618,14 +748,27 @@
       {
         "snippets": "[' shareholders back ITV head for chairman']",
         "target": "Tesco",
-        "sentiment_score": "0.139",
+        "sentiment_score": "0.04",
+        "aspects": "['Corporate/Appointment/Executive Appointment']"
+      },
+      {
+        "snippets": "[' shareholders back ITV head for chairman']",
+        "target": "ITV",
+        "sentiment_score": "-0.01",
         "aspects": "['Corporate/Appointment/Executive Appointment']"
       }
+
     ]
   },
   "184": {
     "sentence": "Buffett's Berkshire builds Deere stake, dumps Exxon",
     "info": [
+      {
+        "snippets": "['builds Deere stake ']",
+        "target": "Berkshire",
+        "sentiment_score": "0.05",
+        "aspects": "['Stock/Signal/Buy Signal']"
+      },
       {
         "snippets": "['builds Deere stake ']",
         "target": "Deere",
@@ -669,6 +812,12 @@
         "snippets": "['to Ensure Compliance After Petrobras Bribery Report']",
         "target": "Rolls-Royce",
         "sentiment_score": "-0.075",
+        "aspects": "['Corporate/Legal/Court Ruling']"
+      },
+      {
+        "snippets": "['to Ensure Compliance After Petrobras Bribery Report']",
+        "target": "Petrobras",
+        "sentiment_score": "-0.311",
         "aspects": "['Corporate/Legal/Court Ruling']"
       }
     ]
@@ -714,6 +863,12 @@
         "target": "Friends Life",
         "sentiment_score": "0.387",
         "aspects": "['Corporate/Financial/Financial Results/Earnings']"
+      },
+      {
+        "snippets": "['lifts profits 38%']",
+        "target": "Aviva",
+        "sentiment_score": "0.09",
+        "aspects": "['Corporate/Financial/Financial Results/Earnings']"
       }
     ]
   },
@@ -734,7 +889,7 @@
       {
         "snippets": "['boss faces stiff challenge']",
         "target": "Credit Suisse",
-        "sentiment_score": "-0.181",
+        "sentiment_score": "-0.191",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -745,7 +900,7 @@
       {
         "snippets": "['Traffic Up']",
         "target": "Aer Lingus",
-        "sentiment_score": "0.284",
+        "sentiment_score": "0.315",
         "aspects": "['Corporate/Sales']"
       },
       {
@@ -757,14 +912,21 @@
     ]
   },
   "219": {
-    "sentence": "Is It Worth Investing In Tesco PLC And Prudential plc Now?",
+    "sentence": "Is It Worth Investing In Tesco PLC And Prudential PLC Now?",
     "info": [
       {
-        "snippets": "['Investing In Tesco PLC And Prudential plc Now?']",
+        "snippets": "['Investing In Tesco PLC And Prudential PLC Now?']",
         "target": "Tesco PLC",
-        "sentiment_score": "0.161",
+        "sentiment_score": "0.151",
+        "aspects": "['Corporate/Strategy/Investment']"
+      },
+      {
+        "snippets": "['Investing In Tesco PLC And Prudential PLC Now?']",
+        "target": "Prudential PLC",
+        "sentiment_score": "0.151",
         "aspects": "['Corporate/Strategy/Investment']"
       }
+
     ]
   },
   "225": {
@@ -775,7 +937,14 @@
         "target": "Friends Life",
         "sentiment_score": "0.516",
         "aspects": "['Market/Market/Market Trend']"
+      },
+      {
+        "snippets": "['FTSE 100 Gainers']",
+        "target": "Aviva",
+        "sentiment_score": "0.516",
+        "aspects": "['Market/Market/Market Trend']"
       }
+
     ]
   },
   "234": {
@@ -790,18 +959,25 @@
     ]
   },
   "239": {
-    "sentence": "CompaniesKingfisher bid for Mr Bricolage runs into trouble",
+    "sentence": "Kingfisher bid for Mr Bricolage runs into trouble",
     "info": [
       {
         "snippets": "['bid for Mr Bricolage runs into trouble']",
         "target": "Mr Bricolage",
         "sentiment_score": "-0.253",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['bid for Mr Bricolage runs into trouble']",
+        "target": "Kingfisher",
+        "sentiment_score": "-0.138",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "240": {
-    "sentence": "UPDATE 3-Auto Trader shares leap in UK's biggest private equity-backed listing",
+    "sentence": "Auto Trader shares leap in UK's biggest private equity-backed listing",
     "info": [
       {
         "snippets": "['shares leap in UK's biggest private equity-backed listing']",
@@ -842,7 +1018,14 @@
         "target": "Novartis",
         "sentiment_score": "0.264",
         "aspects": "['Corporate/Strategy/Reorganization']"
+      },
+      {
+        "snippets": "['complete deals to reshape both drugmakers']",
+        "target": "GSK",
+        "sentiment_score": "0.264",
+        "aspects": "['Corporate/Strategy/Reorganization']"
       }
+
     ]
   },
   "244": {
@@ -853,7 +1036,14 @@
         "target": "Friends Life",
         "sentiment_score": "0.39",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Life top forecasts ahead of 5.6 billion pound merger']",
+        "target": "Aviva",
+        "sentiment_score": "0.39",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "246": {
@@ -861,14 +1051,20 @@
     "info": [
       {
         "snippets": "['to Sell OneMain to Springleaf for $4.25 Billion']",
+        "target": "Citigroup",
+        "sentiment_score": "0.132",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to Sell OneMain to Springleaf for $4.25 Billion']",
         "target": "OneMain",
-        "sentiment_score": "0.283",
+        "sentiment_score": "0.08",
         "aspects": "['Corporate/M&A/M&A']"
       },
       {
         "snippets": "['to Sell OneMain to Springleaf for $4.25 Billion']",
         "target": "Springleaf",
-        "sentiment_score": "0.225",
+        "sentiment_score": "0.253",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -881,7 +1077,14 @@
         "target": "Tullow",
         "sentiment_score": "0.544",
         "aspects": "['Stock/Price Action/Bullish/Bullish Behaviour']"
+      },
+      {
+        "snippets": "['U.K. Stocks Resume Gains to Rally to Record;']",
+        "target": "CRH",
+        "sentiment_score": "0.544",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behaviour']"
       }
+
     ]
   },
   "248": {
@@ -892,7 +1095,14 @@
         "target": "PwC",
         "sentiment_score": "-0.437",
         "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
+      },
+      {
+        "snippets": "['British American Tobacco drops']",
+        "target": "British American Tobacco",
+        "sentiment_score": "-0.125",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
       }
+
     ]
   },
   "252": {
@@ -903,6 +1113,12 @@
         "target": "Prudential",
         "sentiment_score": "-0.651",
         "aspects": "['Market/Market/Market Trend']"
+      },
+      {
+        "snippets": "['UK's FTSE has worst day so far in 201']",
+        "target": "BG",
+        "sentiment_score": "-0.651",
+        "aspects": "['Market/Market/Market Trend']"
       }
     ]
   },
@@ -911,16 +1127,23 @@
     "info": [
       {
         "snippets": "['in Total Recall: how pulling a product affects profit']",
-        "target": "Cadbury's",
+        "target": "Cadbury",
         "sentiment_score": "-0.158",
         "aspects": "['Corporate/Rumors/Scoop']"
       },
       {
         "snippets": "['in Total Recall: how pulling a product affects profit']",
         "target": "Kraft",
-        "sentiment_score": "-0.179",
+        "sentiment_score": "-0.158",
         "aspects": "['Corporate/Rumors/Scoop']"
-      }
+      },
+      {
+        "snippets": "['in Total Recall: how pulling a product affects profit']",
+        "target": "Britvic",
+        "sentiment_score": "-0.158",
+        "aspects": "['Corporate/Rumors/Scoop']"
+      },
+
     ]
   },
   "257": {
@@ -928,7 +1151,7 @@
     "info": [
       {
         "snippets": "['Merger Came Together in Speedy 10 Weeks']",
-        "target": "Kraft",
+        "target": "Kraft-Heinz",
         "sentiment_score": "0.214",
         "aspects": "['Corporate/M&A/M&A']"
       }
@@ -945,7 +1168,7 @@
       },
       {
         "snippets": "['Teams With Daiichi Sankyo To Sell Movantik In US']",
-        "target": "Movantik",
+        "target": "AstraZeneca",
         "sentiment_score": "0.369",
         "aspects": "['Corporate/Sales/Partnership']"
       }
@@ -968,7 +1191,7 @@
       {
         "snippets": "['poaches Prudential's Thiam for Asian push']",
         "target": "Credit Suisse",
-        "sentiment_score": "0.125",
+        "sentiment_score": "0.09",
         "aspects": "['Corporate/Strategy']"
       },
       {
@@ -987,7 +1210,14 @@
         "target": "Mr Bricolage",
         "sentiment_score": "-0.311",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['Kingfisher takeover of Mr Bricolage could hit a brick wall']",
+        "target": "Kingfisher",
+        "sentiment_score": "-0.186",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "270": {
@@ -998,7 +1228,14 @@
         "target": "Shell",
         "sentiment_score": "-0.508",
         "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
+      },
+      {
+        "snippets": "['Barclays, Shell Fall']",
+        "target": "Barclays",
+        "sentiment_score": "-0.508",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
       }
+
     ]
   },
   "274": {
@@ -1006,10 +1243,17 @@
     "info": [
       {
         "snippets": "['Admiral blows hot and cold']",
-        "target": "Friends Life",
-        "sentiment_score": "0.053",
+        "target": "Aviva",
+        "sentiment_score": "0.437",
+        "aspects": "['Stock/Price Action/Volatility/Stock Volatility']"
+      },
+      {
+        "snippets": "['Admiral blows hot and cold']",
+        "target": "Admiral",
+        "sentiment_score": "0.0",
         "aspects": "['Stock/Price Action/Volatility/Stock Volatility']"
       }
+
     ]
   },
   "275": {
@@ -1023,8 +1267,8 @@
       },
       {
         "snippets": "['AstraZeneca And Daiichi Sankyo To Jointly Commercialise MOVANTIK']",
-        "target": "MOVANTIK",
-        "sentiment_score": "0.454",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.361",
         "aspects": "['Corporate/Sales/Partnership']"
       }
     ]
@@ -1037,7 +1281,14 @@
         "target": "MediaCityUK",
         "sentiment_score": "0.379",
         "aspects": "['Stock/Signal/Buy Signal']"
+      },
+      {
+        "snippets": "['Legal & General arm buys 50 pct stake in MediaCityUK']",
+        "target": "Legal & General",
+        "sentiment_score": "0.177",
+        "aspects": "['Stock/Signal/Buy Signal']"
       }
+
     ]
   },
   "281": {
@@ -1052,7 +1303,7 @@
     ]
   },
   "290": {
-    "sentence": "CompaniesTravis Perkins lifts dividend, earnings rise 15%",
+    "sentence": "Travis Perkins lifts dividend, earnings rise 15%",
     "info": [
       {
         "snippets": "['lifts dividend,']",
@@ -1067,7 +1318,7 @@
     "info": [
       {
         "snippets": "['Aviva tops the market']",
-        "target": "Friends",
+        "target": "Aviva",
         "sentiment_score": "0.443",
         "aspects": "['Market/Market/Market Trend']"
       }
@@ -1078,10 +1329,17 @@
     "info": [
       {
         "snippets": "['picks Standard Bank's Hemphill as new CEO']",
-        "target": "Standard Bank",
+        "target": "Old Mutual",
         "sentiment_score": "0.025",
         "aspects": "['Corporate/Appointment/Executive Appointment']"
+      },
+      {
+        "snippets": "['picks Standard Bank's Hemphill as new CEO']",
+        "target": "Standard Bank",
+        "sentiment_score": "0.0",
+        "aspects": "['Corporate/Appointment/Executive Appointment']"
       }
+
     ]
   },
   "302": {
@@ -1096,13 +1354,13 @@
       {
         "snippets": "['FDA panel backs safety updates for AstraZeneca,']",
         "target": "Takeda",
-        "sentiment_score": "-0.198",
+        "sentiment_score": "0.143",
         "aspects": "['Corporate/Regulatory']"
       }
     ]
   },
   "304": {
-    "sentence": "CompaniesDiageo stays neutral on India boardroom turmoil",
+    "sentence": "Diageo stays neutral on India boardroom turmoil",
     "info": [
       {
         "snippets": "['India boardroom turmoil']",
@@ -1135,9 +1393,16 @@
       {
         "snippets": "['Deal Meets Shareholder Skepticism']",
         "target": "Shell",
+        "sentiment_score": "-0.318",
+        "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Deal Meets Shareholder Skepticism']",
+        "target": "BG",
         "sentiment_score": "-0.345",
         "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "321": {
@@ -1148,7 +1413,14 @@
         "target": "Shell",
         "sentiment_score": "0.193",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['offers 50 percent premium to buy']",
+        "target": "BG",
+        "sentiment_score": "0.393",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "324": {
@@ -1170,7 +1442,14 @@
         "target": "Shell",
         "sentiment_score": "0.25",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['buy BG Group in $69.7 billion takeover']",
+        "target": "BG Group",
+        "sentiment_score": "0.418",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "336": {
@@ -1181,11 +1460,18 @@
         "target": "Standard Chartered",
         "sentiment_score": "0.556",
         "aspects": "['Stock/Price Action/Bullish/Bullish Behaviour']"
+      },
+      {
+        "snippets": "['Shares Rise']",
+        "target": "HSBC",
+        "sentiment_score": "0.556",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behaviour']"
       }
+
     ]
   },
   "342": {
-    "sentence": "UPDATE 1-BP shareholders back more disclosure on climate change risks",
+    "sentence": "BP shareholders back more disclosure on climate change risks",
     "info": [
       {
         "snippets": "['shareholders back more disclosure on climate change risks']",
@@ -1207,7 +1493,13 @@
       {
         "snippets": "['challenges Exxon dominance with 47 billion-pound bid for BG']",
         "target": "Shell",
-        "sentiment_score": "0.078",
+        "sentiment_score": "0.118",
+        "aspects": "['Corporate/Strategy/Corporate Expansion']"
+      },
+      {
+        "snippets": "['challenges Exxon dominance with 47 billion-pound bid for BG']",
+        "target": "BG",
+        "sentiment_score": "0.352",
         "aspects": "['Corporate/Strategy/Corporate Expansion']"
       }
     ]
@@ -1220,7 +1512,14 @@
         "target": "Royal Dutch Shell",
         "sentiment_score": "0.259",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Royal Dutch Shell to Buy BG Group for Nearly $70 Billion']",
+        "target": "BG Group",
+        "sentiment_score": "0.388",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "349": {
@@ -1258,6 +1557,12 @@
         "snippets": "['Wins $9.2 Billion Order From Emirates Airline']",
         "target": "Rolls-Royce",
         "sentiment_score": "0.777",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Wins $9.2 Billion Order From Emirates Airline']",
+        "target": "Emirates Airline",
+        "sentiment_score": "0.06",
         "aspects": "['Corporate/Sales/Deal']"
       }
     ]
@@ -1356,9 +1661,16 @@
       {
         "snippets": "['BG Group Still Happy With Shell's $70 Billion Offer']",
         "target": "Shell",
-        "sentiment_score": "0.235",
+        "sentiment_score": "0.151",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['BG Group Still Happy With Shell's $70 Billion Offer']",
+        "target": "BG Group",
+        "sentiment_score": "0.1",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "402": {
@@ -1367,9 +1679,16 @@
       {
         "snippets": "['buys Meantime']",
         "target": "SABMiller",
-        "sentiment_score": "0.296",
+        "sentiment_score": "0.267",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['buys Meantime']",
+        "target": "Meantime",
+        "sentiment_score": "0.336",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "405": {
@@ -1380,7 +1699,14 @@
         "target": "Friends Life",
         "sentiment_score": "-0.09",
         "aspects": "['Corporate/Strategy/Corporate Expansion']"
+      },
+      {
+        "snippets": "['shuts Friends Life head office in rapid integration move']",
+        "target": "Aviva",
+        "sentiment_score": "-0.05",
+        "aspects": "['Corporate/Strategy/Corporate Expansion']"
       }
+
     ]
   },
   "409": {
@@ -1391,7 +1717,14 @@
         "target": "Sports Direct",
         "sentiment_score": "0.459",
         "aspects": "['Stock/Technical Analysis/Trend/Trending up']"
+      },
+      {
+        "snippets": "['rise in Britain's share index']",
+        "target": "Kingfisher",
+        "sentiment_score": "0.459",
+        "aspects": "['Stock/Technical Analysis/Trend/Trending up']"
       }
+
     ]
   },
   "412": {
@@ -1439,7 +1772,7 @@
     ]
   },
   "422": {
-    "sentence": "RPT-Old Mutual Q1 gross sales beat forecasts, up 18 pct",
+    "sentence": "Old Mutual Q1 gross sales beat forecasts, up 18 pct",
     "info": [
       {
         "snippets": "['gross sales beat']",
@@ -1450,7 +1783,7 @@
     ]
   },
   "427": {
-    "sentence": "UPDATE 3-BP settles oil spill-related claims with Halliburton, Transocean",
+    "sentence": "BP settles oil spill-related claims with Halliburton, Transocean",
     "info": [
       {
         "snippets": "['settles oil spill-related claims']",
@@ -1463,7 +1796,14 @@
         "target": "Halliburton",
         "sentiment_score": "-0.042",
         "aspects": "['Corporate/Legal/Settlement']"
+      },
+      {
+        "snippets": "['settles oil spill-related claims with']",
+        "target": "Transocean",
+        "sentiment_score": "-0.042",
+        "aspects": "['Corporate/Legal/Settlement']"
       }
+
     ]
   },
   "429": {
@@ -1520,12 +1860,6 @@
     "sentence": "PRESS: Serco Set To Appoint Roy Gardner, Ex-Centrica, As Chairman - FT",
     "info": [
       {
-        "snippets": "['Set To Appoint Roy Gardner, Ex-Centrica, As Chairman - FT']",
-        "target": "Centrica",
-        "sentiment_score": "0.195",
-        "aspects": "['Corporate/Appointment']"
-      },
-      {
         "snippets": "['Set To Appoint Roy Gardner, Ex-Centrica, As Chairman']",
         "target": "Serco",
         "sentiment_score": "0.122",
@@ -1534,8 +1868,14 @@
     ]
   },
   "449": {
-    "sentence": "UPDATE 1-Cypress Semiconductor offers to buy Integrated Silicon Solution",
+    "sentence": "Cypress Semiconductor offers to buy Integrated Silicon Solution",
     "info": [
+      {
+        "snippets": "['Semiconductor offers to buy Integrated Silicon Solution']",
+        "target": "Cypress Semiconductor",
+        "sentiment_score": "0.154",
+        "aspects": "['Stock/Signal/Buy Signal']"
+      },
       {
         "snippets": "['Semiconductor offers to buy Integrated Silicon Solution']",
         "target": "Integrated Silicon Solution",
@@ -1545,14 +1885,21 @@
     ]
   },
   "454": {
-    "sentence": "UPDATE 1-Nomura, RBS must pay $806 mln in mortgage bond case-US judge",
+    "sentence": "Nomura, RBS must pay $806 mln in mortgage bond case-US judge",
     "info": [
       {
         "snippets": "['RBS must pay $806 mln in mortgage bond case-']",
         "target": "RBS",
         "sentiment_score": "-0.69",
         "aspects": "['Corporate/Legal/Settlement']"
+      },
+      {
+        "snippets": "['RBS must pay $806 mln in mortgage bond case-']",
+        "target": "Nomura",
+        "sentiment_score": "-0.69",
+        "aspects": "['Corporate/Legal/Settlement']"
       }
+
     ]
   },
   "459": {
@@ -1624,6 +1971,12 @@
         "target": "Lidl",
         "sentiment_score": "0.372",
         "aspects": "['Corporate/Strategy/Corporate Expansion']"
+      },
+      {
+        "snippets": "['Aldi and Lidl expansion']",
+        "target": "Aldi",
+        "sentiment_score": "0.372",
+        "aspects": "['Corporate/Strategy/Corporate Expansion']"
       }
     ]
   },
@@ -1639,7 +1992,7 @@
       {
         "snippets": "['extends gas deals']",
         "target": "Statoil",
-        "sentiment_score": "0.239",
+        "sentiment_score": "0.199",
         "aspects": "['Corporate/Sales/Deal']"
       }
     ]
@@ -1685,7 +2038,14 @@
         "target": "RBS",
         "sentiment_score": "-0.53",
         "aspects": "['Stock/Coverage/AnalystRatings/downgrade']"
+      },
+      {
+        "snippets": "['downgrades Barclays and RBS']",
+        "target": "Barclays",
+        "sentiment_score": "-0.53",
+        "aspects": "['Stock/Coverage/AnalystRatings/downgrade']"
       }
+
     ]
   },
   "502": {
@@ -1705,13 +2065,13 @@
       {
         "snippets": "['sales outlook']",
         "target": "Arm",
-        "sentiment_score": "-0.41",
+        "sentiment_score": "-0.53",
         "aspects": "['Corporate/Sales']"
       }
     ]
   },
   "511": {
-    "sentence": "CompaniesLSE adds ex-SEC head Schapiro to board",
+    "sentence": "LSE adds ex-SEC head Schapiro to board",
     "info": [
       {
         "snippets": "['adds ex-SEC head Schapiro to board']",
@@ -1729,7 +2089,14 @@
         "target": "Tesco",
         "sentiment_score": "-0.41",
         "aspects": "['Corporate/Sales/Sales']"
+      },
+      {
+        "snippets": "['Sales boost']",
+        "target": "Morrisons",
+        "sentiment_score": "0.255",
+        "aspects": "['Corporate/Sales/Sales']"
       }
+
     ]
   },
   "516": {
@@ -1744,7 +2111,7 @@
     ]
   },
   "517": {
-    "sentence": "CompaniesHoward Davies appointment as RBS director delayed",
+    "sentence": "Howard Davies appointment as RBS director delayed",
     "info": [
       {
         "snippets": "['appointment as RBS director delayed']",
@@ -1771,7 +2138,7 @@
       {
         "snippets": "['profit boost on strong sales']",
         "target": "Dixons Carphone",
-        "sentiment_score": "0.478",
+        "sentiment_score": "0.511",
         "aspects": "['Corporate/Sales']"
       }
     ]
@@ -1788,7 +2155,7 @@
       {
         "snippets": "['rallies off three-month low']",
         "target": "StanChart",
-        "sentiment_score": "0.465",
+        "sentiment_score": "0.334",
         "aspects": "['Market/Market/Market Outlook']"
       }
     ]
@@ -1799,6 +2166,12 @@
       {
         "snippets": "['lead FTSE lower']",
         "target": "Royal Mail",
+        "sentiment_score": "-0.438",
+        "aspects": "['Market/Market/Market Trend']"
+      },
+      {
+        "snippets": "['lead FTSE lower']",
+        "target": "Johnson Matthey",
         "sentiment_score": "-0.438",
         "aspects": "['Market/Market/Market Trend']"
       }
@@ -1827,14 +2200,21 @@
     ]
   },
   "541": {
-    "sentence": "UPDATE 3-Stifel to buy former Lehman brokerage from Barclays",
+    "sentence": "Stifel to buy former Lehman brokerage from Barclays",
     "info": [
       {
         "snippets": "['Stifel to buy former Lehman brokerage']",
-        "target": "Lehman",
-        "sentiment_score": "0.164",
+        "target": "Stifel",
+        "sentiment_score": "0.11",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['Stifel to buy former Lehman brokerage']",
+        "target": "Barclays",
+        "sentiment_score": "0.0",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "545": {
@@ -1854,7 +2234,7 @@
       {
         "snippets": "['Greek debt concerns']",
         "target": "easyjet",
-        "sentiment_score": "-0.414",
+        "sentiment_score": "-0.424",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -1879,12 +2259,6 @@
         "sentiment_score": "0.199",
         "aspects": "['Corporate/Legal']"
       },
-      {
-        "snippets": "['Expects Gain']",
-        "target": "Lehman",
-        "sentiment_score": "0.239",
-        "aspects": "['Corporate/Legal/Settlement']"
-      }
     ]
   },
   "552": {
@@ -1893,7 +2267,7 @@
       {
         "snippets": "['books further Â£30m cost for Shetland gas terminal delays']",
         "target": "Petrofac",
-        "sentiment_score": "-0.343",
+        "sentiment_score": "-0.363",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -1904,7 +2278,7 @@
       {
         "snippets": "['share price rise']",
         "target": "Petrofac",
-        "sentiment_score": "0.09",
+        "sentiment_score": "0.12",
         "aspects": "['Stock/Price Action']"
       }
     ]
@@ -1932,7 +2306,7 @@
     ]
   },
   "556": {
-    "sentence": "CompaniesActelion shares hit record on Shire takeover talk",
+    "sentence": "Actelion shares hit record on Shire takeover talk",
     "info": [
       {
         "snippets": "['Shire takeover talk']",
@@ -1964,8 +2338,8 @@
     "info": [
       {
         "snippets": "['Diageo Shares Surge']",
-        "target": "Lemann",
-        "sentiment_score": "0.415",
+        "target": "Diageo",
+        "sentiment_score": "0.468",
         "aspects": "['Stock/Technical Analysis/Trend/Trending up']"
       }
     ]
@@ -1986,8 +2360,14 @@
     "info": [
       {
         "snippets": "['Insurance Hires Towergate's Egan as Chief Financial Officer']",
-        "target": "Towergate",
+        "target": "RSA Insurance",
         "sentiment_score": "0.002",
+        "aspects": "['Corporate/Appointment/Executive Appointment']"
+      },
+      {
+        "snippets": "['Insurance Hires Towergate's Egan as Chief Financial Officer']",
+        "target": "Towergate",
+        "sentiment_score": "-0.001",
         "aspects": "['Corporate/Appointment/Executive Appointment']"
       }
     ]
@@ -2011,15 +2391,28 @@
         "target": "Starwood",
         "sentiment_score": "-0.078",
         "aspects": "['Corporate/Rumors/Scoop']"
+      },
+      {
+        "snippets": "['Denies Reports of Starwood Merger Talks']",
+        "target": "InterContinental",
+        "sentiment_score": "-0.078",
+        "aspects": "['Corporate/Rumors/Scoop']"
       }
+
     ]
   },
   "594": {
-    "sentence": "REFILE-Hikma and Barclays help Britain's FTSE to climb higher",
+    "sentence": "Hikma and Barclays help Britain's FTSE to climb higher",
     "info": [
       {
         "snippets": "['help Britain's FTSE to climb higher']",
         "target": "Hikma",
+        "sentiment_score": "0.452",
+        "aspects": "['Market/Market/Market Trend']"
+      },
+      {
+        "snippets": "['help Britain's FTSE to climb higher']",
+        "target": "Barclays",
         "sentiment_score": "0.452",
         "aspects": "['Market/Market/Market Trend']"
       }
@@ -2064,9 +2457,16 @@
       {
         "snippets": "['Insurance Considering Offer for UK Rival RSA Insurance']",
         "target": "Zurich Insurance",
-        "sentiment_score": "0.25",
+        "sentiment_score": "0.1",
+        "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Insurance Considering Offer for UK Rival RSA Insurance']",
+        "target": "RSA Insurance",
+        "sentiment_score": "0.251",
         "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "616": {
@@ -2083,6 +2483,12 @@
   "622": {
     "sentence": "Ingenious, HSBC, UBS and Coutts sued by 'tax avoidance' clients",
     "info": [
+      {
+        "snippets": "['sued by 'tax avoidance' clients']",
+        "target": "Ingenious",
+        "sentiment_score": "-0.248",
+        "aspects": "['Corporate/Legal/Lawsuit']"
+      },
       {
         "snippets": "['sued by 'tax avoidance' clients']",
         "target": "Coutts",
@@ -2104,25 +2510,39 @@
     ]
   },
   "624": {
-    "sentence": "UPDATE 1-AstraZeneca sells rare cancer drug to Sanofi for up to $300 mln",
+    "sentence": "AstraZeneca sells rare cancer drug to Sanofi for up to $300 mln",
     "info": [
       {
         "snippets": "['sells rare cancer drug to Sanofi']",
-        "target": "Sanofi",
+        "target": "AstraZeneca",
         "sentiment_score": "0.258",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['sells rare cancer drug to Sanofi']",
+        "target": "Sanofi",
+        "sentiment_score": "0.112",
+        "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "627": {
-    "sentence": "Sainsbury sells unit to LloydsPharmacy",
+    "sentence": "Sainsbury sells unit to Lloyds Pharmacy",
     "info": [
       {
-        "snippets": "['sells unit to LloydsPharmacy']",
+        "snippets": "['sells unit to Lloyds Pharmacy']",
         "target": "Sainsbury",
         "sentiment_score": "0.234",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+       {
+        "snippets": "['sells unit to Lloyds Pharmacy']",
+        "target": "Lloyds Pharmacy",
+        "sentiment_score": "0.101",
+        "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "632": {
@@ -2166,7 +2586,14 @@
         "target": "Glaxo",
         "sentiment_score": "0.284",
         "aspects": "['Corporate/Sales/Partnership']"
+      },
+      {
+        "snippets": "['Signs China Manufacturing Deal With Desano']",
+        "target": "Desano",
+        "sentiment_score": "0.165",
+        "aspects": "['Corporate/Sales/Partnership']"
       }
+
     ]
   },
   "653": {
@@ -2175,13 +2602,20 @@
       {
         "snippets": "['sells Caprelsa rights to Sanofi unit']",
         "target": "Sanofi",
+        "sentiment_score": "0.217",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['sells Caprelsa rights to Sanofi unit']",
+        "target": "AstraZeneca",
         "sentiment_score": "0.233",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "659": {
-    "sentence": "UPDATE 5-Barclays Chairman McFarlane axes CEO to speed up strategic change",
+    "sentence": "Barclays Chairman McFarlane axes CEO to speed up strategic change",
     "info": [
       {
         "snippets": "['to speed up strategic change']",
@@ -2199,6 +2633,12 @@
         "target": "Rio Tinto",
         "sentiment_score": "-0.665",
         "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
+      },
+      {
+        "snippets": "['Rio Tinto Sink in Commodities Rout']",
+        "target": "BHP",
+        "sentiment_score": "-0.665",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behaviour']"
       }
     ]
   },
@@ -2210,6 +2650,12 @@
         "target": "M&S",
         "sentiment_score": "-0.448",
         "aspects": "['Market/Market/Market Trend']"
+      },
+      {
+        "snippets": "['FTSE led lowe']",
+        "target": "GLaxoSmithKline",
+        "sentiment_score": "-0.448",
+        "aspects": "['Market/Market/Market Trend']"
       }
     ]
   },
@@ -2218,8 +2664,14 @@
     "info": [
       {
         "snippets": "['to buy Fokker Technologies']",
+        "target": "Fokker Technologies",
+        "sentiment_score": "0.379",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to buy Fokker Technologies']",
         "target": "GKN",
-        "sentiment_score": "0.276",
+        "sentiment_score": "0.246",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -2235,7 +2687,7 @@
       },
       {
         "snippets": "['Sells Ryder Cup Venue Gleneagles Hotel to Ennismore Group']",
-        "target": "Gleneagles Hotel",
+        "target": "Diageo",
         "sentiment_score": "0.237",
         "aspects": "['Corporate/Sales/Deal']"
       }
@@ -2249,6 +2701,18 @@
         "target": "CIB",
         "sentiment_score": "0.148",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+       {
+        "snippets": "['Legal & General Sell Egyptian Life Joint Venture To AXA']",
+        "target": "Legal & General",
+        "sentiment_score": "0.148",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Legal & General Sell Egyptian Life Joint Venture To AXA']",
+        "target": "AXA",
+        "sentiment_score": "0.112",
+        "aspects": "['Corporate/Sales/Deal']"
       }
     ]
   },
@@ -2257,14 +2721,27 @@
     "info": [
       {
         "snippets": "[' Set To Be Acquired By WPP And Providence']",
+        "target": "Chime Communications",
+        "sentiment_score": "0.252",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+
+      {
+        "snippets": "[' Set To Be Acquired By WPP And Providence']",
         "target": "WPP",
-        "sentiment_score": "0.202",
+        "sentiment_score": "0.08",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "[' Set To Be Acquired By WPP And Providence']",
+        "target": "Providence",
+        "sentiment_score": "0.08",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
   },
   "680": {
-    "sentence": "CompaniesNew Aggreko CEO to reshape business, strip costs",
+    "sentence": "New Aggreko CEO to reshape business, strip costs",
     "info": [
       {
         "snippets": "['to reshape business, strip costs']",
@@ -2281,6 +2758,12 @@
         "snippets": "['to Pay Inovio Up to $700 Million for Cancer Drug']",
         "target": "Inovio",
         "sentiment_score": "0.33",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['to Pay Inovio Up to $700 Million for Cancer Drug']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.11",
         "aspects": "['Corporate/Sales/Deal']"
       }
     ]
@@ -2302,9 +2785,16 @@
       {
         "snippets": "['US sanctions put ']",
         "target": "Shell",
-        "sentiment_score": "-0.314",
+        "sentiment_score": "-0.194",
+        "aspects": "['Economy/Trade/Sanctions']"
+      },
+      {
+        "snippets": "['US sanctions put ']",
+        "target": "Gazprom",
+        "sentiment_score": "-0.194",
         "aspects": "['Economy/Trade/Sanctions']"
       }
+
     ]
   },
   "688": {
@@ -2313,18 +2803,18 @@
       {
         "snippets": "['Not Raising Capital Yet As Dividend Cut']",
         "target": "Standard Chartered",
-        "sentiment_score": "-0.158",
+        "sentiment_score": "-0.228",
         "aspects": "['Corporate/Dividend Policy']"
       }
     ]
   },
   "692": {
-    "sentence": "UPDATE 1-BHP Billiton's credit ratings fragile in FY16, agencies warn",
+    "sentence": "BHP Billiton's credit ratings fragile in FY16, agencies warn",
     "info": [
       {
         "snippets": "['credit ratings fragile in FY16, agencies warn']",
         "target": "BHP",
-        "sentiment_score": "-0.338",
+        "sentiment_score": "-0.348",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -2348,6 +2838,12 @@
         "target": "Novartis",
         "sentiment_score": "0.217",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['buys remaining rights to GSK treatment in deal up to $1 billion']",
+        "target": "GSK",
+        "sentiment_score": "0.217",
+        "aspects": "['Corporate/Sales/Deal']"
       }
     ]
   },
@@ -2357,20 +2853,34 @@
       {
         "snippets": "['bags another cancer drug deal']",
         "target": "Inovio",
-        "sentiment_score": "0.316",
+        "sentiment_score": "0.216",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['bags another cancer drug deal']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.244",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "704": {
-    "sentence": "REFILE-Aviva Investors to move 34 bln euros in assets from AXA fund arm",
+    "sentence": "Aviva Investors to move 34 bln euros in assets from AXA fund arm",
     "info": [
       {
         "snippets": "['Investors to move 34 bln euros in assets from AXA fund arm']",
         "target": "AXA",
         "sentiment_score": "-0.398",
         "aspects": "['Market/Conditions/Mutual Fund flows']"
+      },
+      {
+        "snippets": "['Investors to move 34 bln euros in assets from AXA fund arm']",
+        "target": "Aviva Investors",
+        "sentiment_score": "0.06",
+        "aspects": "['Market/Conditions/Mutual Fund flows']"
       }
+
     ]
   },
   "715": {
@@ -2385,12 +2895,12 @@
     ]
   },
   "726": {
-    "sentence": "Buffett's Company Reports 37 Percent Drop in 2Q Earnings",
+    "sentence": "Buffett's Berkshire Hathaway Reports 37 Percent Drop in 2Q Earnings",
     "info": [
       {
         "snippets": "['Reports 37 Percent Drop in 2Q Earnings']",
-        "target": "Berkshire Hathaway Inc.",
-        "sentiment_score": "-0.566",
+        "target": "Berkshire Hathaway",
+        "sentiment_score": "-0.596",
         "aspects": "['Corporate/Company Communication']"
       }
     ]
@@ -2414,7 +2924,14 @@
         "target": "Tesco",
         "sentiment_score": "-0.398",
         "aspects": "['Corporate/Sales']"
+      },
+      {
+        "snippets": "['sales fall as march of the discounters']",
+        "target": "Asda",
+        "sentiment_score": "-0.398",
+        "aspects": "['Corporate/Sales']"
       }
+
     ]
   },
   "741": {
@@ -2423,6 +2940,12 @@
       {
         "snippets": "['proposes $30 bln all-share tie-up with']",
         "target": "Shire",
+        "sentiment_score": "0.22",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['proposes $30 bln all-share tie-up with']",
+        "target": "Baxalta",
         "sentiment_score": "0.22",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
@@ -2434,7 +2957,7 @@
       {
         "snippets": "['CEO steps up drive to get Baxalta board talking']",
         "target": "Shire",
-        "sentiment_score": "0.124",
+        "sentiment_score": "0.04",
         "aspects": "['Corporate/Strategy/Corporate Planning']"
       }
     ]
@@ -2447,7 +2970,14 @@
         "target": "Asda",
         "sentiment_score": "-0.356",
         "aspects": "['Corporate/Sales/Demand Shortfall']"
+      },
+      {
+        "snippets": "['Asda sales fall as march of the discounters continues']",
+        "target": "Tesco",
+        "sentiment_score": "-0.356",
+        "aspects": "['Corporate/Sales/Demand Shortfall']"
       }
+
     ]
   },
   "758": {
@@ -2458,7 +2988,14 @@
         "target": "Verizon",
         "sentiment_score": "-0.446",
         "aspects": "['Corporate/Regulatory']"
+      },
+      {
+        "snippets": "['accused of hurting rivals']",
+        "target": "AT&T",
+        "sentiment_score": "-0.446",
+        "aspects": "['Corporate/Regulatory']"
       }
+
     ]
   },
   "759": {
@@ -2467,7 +3004,7 @@
       {
         "snippets": "['FTSE 100 falls as']",
         "target": "Burberry",
-        "sentiment_score": "-0.479",
+        "sentiment_score": "-0.489",
         "aspects": "['Market/Volatility']"
       }
     ]
@@ -2480,11 +3017,17 @@
         "target": "Citi",
         "sentiment_score": "-0.647",
         "aspects": "['Corporate/Legal/Settlement']"
+      },
+      {
+        "snippets": "['agree to pay $2 billion to settle forex .']",
+        "target": "Barclays",
+        "sentiment_score": "-0.647",
+        "aspects": "['Corporate/Legal/Settlement']"
       }
     ]
   },
   "784": {
-    "sentence": "CompaniesCar insurer Hastings Group driving Â£180m IPO",
+    "sentence": "Car insurer Hastings Group driving Â£180m IPO",
     "info": [
       {
         "snippets": "['driving Â£180m IPO']",
@@ -2511,28 +3054,35 @@
       {
         "snippets": "['e acquires neighbouring Glencore nickel property']",
         "target": "Horizonte",
-        "sentiment_score": "0.182",
+        "sentiment_score": "0.242",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['e acquires neighbouring Glencore nickel property']",
+        "target": "Glencore",
+        "sentiment_score": "0.188",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "820": {
-    "sentence": "UPDATE 1-Engineering firm Smiths Group confirms CEO appointment",
+    "sentence": "Engineering firm Smiths Group confirms CEO appointment",
     "info": [
       {
         "snippets": "['confirms CEO appointment']",
-        "target": "Morrissons",
-        "sentiment_score": "0.078",
+        "target": "Smiths Group",
+        "sentiment_score": "0.058",
         "aspects": "['Corporate/Appointment']"
       }
     ]
   },
   "821": {
-    "sentence": "Industry NewsMorrisons unveils which stores will close as 900 jobs face the axe",
+    "sentence": "Morrisons unveils which stores will close as 900 jobs face the axe",
     "info": [
       {
         "snippets": "['unveils which stores will close as 900 jobs face the axe']",
-        "target": "Morrissons",
+        "target": "Morrisons",
         "sentiment_score": "-0.731",
         "aspects": "['Corporate/Company Communication']"
       }
@@ -2565,14 +3115,14 @@
     "info": [
       {
         "snippets": "['Partners With International Business Machines Corp. To Drive']",
-        "target": "ARM Holdings",
+        "target": "ARM Holdings plc",
         "sentiment_score": "0.273",
         "aspects": "['Corporate/Strategy']"
       },
       {
         "snippets": "['Partners With International Business Machines Corp']",
-        "target": "IBM",
-        "sentiment_score": "0.345",
+        "target": "International Business Machines Corp",
+        "sentiment_score": "0.273",
         "aspects": "['Corporate/Strategy']"
       }
     ]
@@ -2593,14 +3143,8 @@
     "info": [
       {
         "snippets": "['Citigroup has blockchain in sight']",
-        "target": "Barclays",
-        "sentiment_score": "0.198",
-        "aspects": "['Corporate/Strategy/Investment']"
-      },
-      {
-        "snippets": "['Citigroup has blockchain in sight']",
         "target": "Citigroup",
-        "sentiment_score": "0.224",
+        "sentiment_score": "0.124",
         "aspects": "['Corporate/Strategy/Investment']"
       }
     ]
@@ -2611,9 +3155,16 @@
       {
         "snippets": "['approaches SABMiller to explore $250bn tie-up']",
         "target": "SAB Miller",
-        "sentiment_score": "0.237",
+        "sentiment_score": "0.127",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['approaches SABMiller to explore $250bn tie-up']",
+        "target": "AB InBev",
+        "sentiment_score": "0.127",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "847": {
@@ -2639,7 +3190,7 @@
     ]
   },
   "856": {
-    "sentence": "News FeedFTSE 100 movers: Ashtead jumps on strong interims; Glencore, BP in ...",
+    "sentence": "FTSE 100 movers: Ashtead jumps on strong interims; Glencore, BP in ...",
     "info": [
       {
         "snippets": "['Ashtead jumps on strong interims']",
@@ -2655,9 +3206,16 @@
       {
         "snippets": "['seeks $275 bln tie-up with SABMiller']",
         "target": "SABMiller",
-        "sentiment_score": "0.295",
+        "sentiment_score": "0.195",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['seeks $275 bln tie-up with SABMiller']",
+        "target": "AB InBev",
+        "sentiment_score": "0.195",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "861": {
@@ -2665,14 +3223,20 @@
     "info": [
       {
         "snippets": "['looks to win over SABMiller investors']",
+        "target": "AB InBev",
+        "sentiment_score": "0.266",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['looks to win over SABMiller investors']",
         "target": "SABMiller",
-        "sentiment_score": "0.276",
+        "sentiment_score": "0.08",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
     ]
   },
   "863": {
-    "sentence": "UPDATE 1-EU regulator backs approval for GSK injectable asthma drug",
+    "sentence": "EU regulator backs approval for GSK injectable asthma drug",
     "info": [
       {
         "snippets": "['EU regulator backs approval for GSK']",
@@ -2699,9 +3263,16 @@
       {
         "snippets": "['TalkTalk hires BAE Systems']",
         "target": "TalkTalk",
-        "sentiment_score": "-0.113",
+        "sentiment_score": "-0.173",
+        "aspects": "['Corporate/Appointment/Staff Hiring']"
+      },
+      {
+        "snippets": "['TalkTalk hires BAE Systems']",
+        "target": "BAE Systems",
+        "sentiment_score": "0.05",
         "aspects": "['Corporate/Appointment/Staff Hiring']"
       }
+
     ]
   },
   "876": {
@@ -2709,21 +3280,35 @@
     "info": [
       {
         "snippets": "['AB InBev Bid for SABMiller Ups Stake']",
-        "target": "SAB Miller",
-        "sentiment_score": "0.236",
+        "target": "SABMiller",
+        "sentiment_score": "0.176",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['AB InBev Bid for SABMiller Ups Stake']",
+        "target": "AB InBev",
+        "sentiment_score": "0.1",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "879": {
-    "sentence": "CompaniesAB InBev signals it won't go hostile for SABMiller",
+    "sentence": "AB InBev signals it won't go hostile for SABMiller",
     "info": [
       {
         "snippets": "['signals it won't go hostile']",
-        "target": "SAB Miller",
+        "target": "SABMiller",
         "sentiment_score": "0.107",
         "aspects": "['Corporate/Rumors/Scoop']"
+      },
+      {
+        "snippets": "['signals it won't go hostile']",
+        "target": "AB InBev",
+        "sentiment_score": "0.03",
+        "aspects": "['Corporate/Rumors/Scoop']"
       }
+
     ]
   },
   "885": {
@@ -2753,19 +3338,25 @@
     "info": [
       {
         "snippets": "['hit by weaker EM currencies']",
-        "target": "SAB Miller",
+        "target": "SABMiller",
         "sentiment_score": "-0.439",
         "aspects": "['Market/Currency']"
       }
     ]
   },
   "897": {
-    "sentence": "UPDATE 5-SABMiller rejects AB InBev's $104 bln takeover approach",
+    "sentence": "SABMiller rejects AB InBev's $104 bln takeover approach",
     "info": [
       {
         "snippets": "['rejects AB InBev's $104 bln takeover approach']",
-        "target": "SAB Miller",
-        "sentiment_score": "0.172",
+        "target": "SABMiller",
+        "sentiment_score": "0.07",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['rejects AB InBev's $104 bln takeover approach']",
+        "target": "AB InBev",
+        "sentiment_score": "0.05",
         "aspects": "['Corporate/M&A/Proposed Merger']"
       }
     ]
@@ -2786,8 +3377,14 @@
     "info": [
       {
         "snippets": "['offers SABMiller $3 billion breakup fee']",
-        "target": "SAB Miller",
+        "target": "SABMiller",
         "sentiment_score": "0.197",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['offers SABMiller $3 billion breakup fee']",
+        "target": "AB InBev",
+        "sentiment_score": "0.03",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -2808,10 +3405,17 @@
     "info": [
       {
         "snippets": "['ups offer for SABMiller']",
-        "target": "SAB Miller",
+        "target": "SABMiller",
         "sentiment_score": "0.257",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['ups offer for SABMiller']",
+        "target": "AB InBev",
+        "sentiment_score": "0.07",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "919": {
@@ -2819,17 +3423,17 @@
     "info": [
       {
         "snippets": "['Tesco PLC's Recovery Continues']",
-        "target": "Tesco",
+        "target": "Tesco PLC",
         "sentiment_score": "0.337",
         "aspects": "['Stock/Fundamentals']"
       }
     ]
   },
   "922": {
-    "sentence": "METALS-Zinc surges 12 pct after Glencore cuts output, fuelling metals rally",
+    "sentence": "Zinc surges 12 pct after Glencore cuts output, fuelling metals rally",
     "info": [
       {
-        "snippets": "['METALS-Zinc surges 12 pct after']",
+        "snippets": "['Zinc surges 12 pct after']",
         "target": "Glencore",
         "sentiment_score": "0.162",
         "aspects": "['Market/Volatility']"
@@ -2837,7 +3441,7 @@
     ]
   },
   "924": {
-    "sentence": "CompaniesUnilever sales lifted by ice cream in soft economy",
+    "sentence": "Unilever sales lifted by ice cream in soft economy",
     "info": [
       {
         "snippets": "['sales lifted by ice cream in soft economy']",
@@ -2888,6 +3492,12 @@
         "target": "SABMiller",
         "sentiment_score": "0.24",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['InBev Increases Offer for Rival SABMiller']",
+        "target": "Anheuser-Busch InBev",
+        "sentiment_score": "0.07",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
     ]
   },
@@ -2896,10 +3506,17 @@
     "info": [
       {
         "snippets": "['Why I'd Buy ARM Holdings plc And BHP Billiton plc Today']",
-        "target": "BHP Billiton",
+        "target": "BHP Billiton plc",
+        "sentiment_score": "0.424",
+        "aspects": "['Corporate/Reputation/Scoop']"
+      },
+      {
+        "snippets": "['Why I'd Buy ARM Holdings plc And BHP Billiton plc Today']",
+        "target": "ARM Holdings plc",
         "sentiment_score": "0.424",
         "aspects": "['Corporate/Reputation/Scoop']"
       }
+
     ]
   },
   "946": {
@@ -2907,10 +3524,17 @@
     "info": [
       {
         "snippets": "['Are The 2 Banks I'd Buy Today']",
-        "target": "Lloyds",
+        "target": "Lloyds Banking Group PLC",
+        "sentiment_score": "0.434",
+        "aspects": "['Corporate/Reputation/Scoop']"
+      },
+      {
+        "snippets": "['Are The 2 Banks I'd Buy Today']",
+        "target": "Barclays PLC",
         "sentiment_score": "0.434",
         "aspects": "['Corporate/Reputation/Scoop']"
       }
+
     ]
   },
   "952": {
@@ -2925,14 +3549,21 @@
     ]
   },
   "963": {
-    "sentence": "EXCLUSIVE-BP, China's CNPC to unveil oil alliance - sources",
+    "sentence": "BP, China's CNPC to unveil oil alliance - sources",
     "info": [
       {
         "snippets": "['China's CNPC to unveil oil alliance - sources']",
         "target": "CNPC",
-        "sentiment_score": "0.318",
+        "sentiment_score": "0.218",
+        "aspects": "['Corporate/Rumors/Scoop']"
+      },
+      {
+        "snippets": "['China's CNPC to unveil oil alliance - sources']",
+        "target": "BP",
+        "sentiment_score": "0.218",
         "aspects": "['Corporate/Rumors/Scoop']"
       }
+
     ]
   },
   "965": {
@@ -2940,8 +3571,14 @@
     "info": [
       {
         "snippets": "['Digs In With Board Divided on InBev Offer']",
-        "target": "SABMiller",
+        "target": "SAB",
         "sentiment_score": "0.016",
+        "aspects": "['Corporate/Reputation/Dispute']"
+      },
+      {
+        "snippets": "['Digs In With Board Divided on InBev Offer']",
+        "target": "InBev",
+        "sentiment_score": "0.0",
         "aspects": "['Corporate/Reputation/Dispute']"
       }
     ]
@@ -2954,7 +3591,14 @@
         "target": "Kinder Morgan",
         "sentiment_score": "0.225",
         "aspects": "['Corporate/M&A/Joint Venture']"
+      },
+      {
+        "snippets": "['form Joint Venture Limited Liability Company to Purchase ..']",
+        "target": "BP",
+        "sentiment_score": "0.225",
+        "aspects": "['Corporate/M&A/Joint Venture']"
       }
+
     ]
   },
   "967": {
@@ -2991,11 +3635,11 @@
     ]
   },
   "981": {
-    "sentence": "BHP Billiton share price: Brazil to sue Samarco for Â£3.5bn",
+    "sentence": "BHP Billiton shares drop as it braces for £3.5bn fine over Brazil dam burst",
     "info": [
       {
-        "snippets": "['Brazil to sue Samarco for Â£3.5bn']",
-        "target": "Samarco",
+        "snippets": "",
+        "target": "BHP Billiton",
         "sentiment_score": "-0.637",
         "aspects": "['Corporate/Legal/Lawsuit']"
       }
@@ -3057,7 +3701,7 @@
     ]
   },
   "1002": {
-    "sentence": "UPDATE 1-Lloyds to cut 945 jobs as part of 3-year restructuring plan",
+    "sentence": "Lloyds to cut 945 jobs as part of 3-year restructuring plan",
     "info": [
       {
         "snippets": "['cut 945 jobs as part of 3-year restructuring plan']",
@@ -3139,7 +3783,7 @@
       {
         "snippets": "['in email, says supports']",
         "target": "Valeant",
-        "sentiment_score": "0.166",
+        "sentiment_score": "0.08",
         "aspects": "['Corporate/Company Communication']"
       }
     ]
@@ -3152,29 +3796,49 @@
         "target": "Perrigo",
         "sentiment_score": "0.326",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['sells US drug rights to Perrigo for $380 mln']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.211",
+        "aspects": "['Corporate/M&A/M&A']"
       }
     ]
   },
   "1032": {
-    "sentence": "UPDATE 1-AstraZeneca buys ZS Pharma for $2.7 billion, pips Actelion",
+    "sentence": "AstraZeneca buys ZS Pharma for $2.7 billion, pips Actelion",
     "info": [
       {
         "snippets": "['AstraZeneca buys ZS Pharma for $2.7 billion, pips Actelion']",
         "target": "ZS Pharma",
         "sentiment_score": "0.468",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['AstraZeneca buys ZS Pharma for $2.7 billion, pips Actelion']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.22",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+ 
     ]
   },
   "1033": {
-    "sentence": "CORRECTED-Shire to buy Dyax for about $5.9 bln",
+    "sentence": "Shire to buy Dyax for about $5.9 bln",
     "info": [
       {
         "snippets": "['Shire to buy Dyax for about $5.9 bln']",
-        "target": "Shire",
+        "target": "Dyax",
         "sentiment_score": "0.402",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+    {
+        "snippets": "['Shire to buy Dyax for about $5.9 bln']",
+        "target": "Shire",
+        "sentiment_score": "0.251",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1037": {
@@ -3196,7 +3860,14 @@
         "target": "ZS Pharma",
         "sentiment_score": "0.52",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['AstraZeneca Acquires ZS Pharma in $2.7 Billion Deal']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.245",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1039": {
@@ -3216,9 +3887,16 @@
       {
         "snippets": "['Peroni and Grolsch put up for sale as ']",
         "target": "SABMiller",
-        "sentiment_score": "0.551",
+        "sentiment_score": "0.251",
+        "aspects": "['Corporate/Sales/Sales']"
+      },
+       {
+        "snippets": "['Peroni and Grolsch put up for sale as ']",
+        "target": "AB InBev ",
+        "sentiment_score": "0.112",
         "aspects": "['Corporate/Sales/Sales']"
       }
+
     ]
   },
   "1044": {
@@ -3227,7 +3905,7 @@
       {
         "snippets": "['expects resilient demand to withstand security fears']",
         "target": "easyJet",
-        "sentiment_score": "0.165",
+        "sentiment_score": "0.185",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -3255,7 +3933,7 @@
     ]
   },
   "1053": {
-    "sentence": "UPDATE 1-SABMiller 2nd-quarter underlying sales rise, forex impacts margins",
+    "sentence": "SABMiller 2nd-quarter underlying sales rise, forex impacts margins",
     "info": [
       {
         "snippets": "[' underlying sales rise']",
@@ -3266,7 +3944,7 @@
     ]
   },
   "1057": {
-    "sentence": "UPDATE 2-Pricey beers lift SABMiller's quarterly underlying sales",
+    "sentence": "Pricey beers lift SABMiller's quarterly underlying sales",
     "info": [
       {
         "snippets": "['lift SABMiller's quarterly underlying sales']",
@@ -3292,8 +3970,14 @@
     "info": [
       {
         "snippets": "['No real aspect?']",
-        "target": "Aviva",
+        "target": "Aviva plc",
         "sentiment_score": "0.324",
+        "aspects": "['Corporate/Company Communication']"
+      },
+      {
+        "snippets": "['No real aspect?']",
+        "target": "Admiral Group plc",
+        "sentiment_score": "0.345",
         "aspects": "['Corporate/Company Communication']"
       },
       {
@@ -3310,12 +3994,12 @@
       {
         "snippets": "['RBS struggle in Bank of England stress tests']",
         "target": "RBS",
-        "sentiment_score": "-0.738",
+        "sentiment_score": "-0.38",
         "aspects": "['Economy/Central Banks']"
       },
       {
         "snippets": "['struggle in Bank of England stress tests']",
-        "target": "Standard Chartered",
+        "target": "StanChart",
         "sentiment_score": "-0.39",
         "aspects": "['Corporate/Regulatory']"
       }
@@ -3327,9 +4011,16 @@
       {
         "snippets": "['sells benchmark indices unit']",
         "target": "Bloomberg",
-        "sentiment_score": "0.281",
+        "sentiment_score": "0.199",
+        "aspects": "['Corporate/Strategy/Divestment']"
+      },
+      {
+        "snippets": "['sells benchmark indices unit']",
+        "target": "Bloomberg",
+        "sentiment_score": "0.155",
         "aspects": "['Corporate/Strategy/Divestment']"
       }
+
     ]
   },
   "1077": {
@@ -3352,7 +4043,14 @@
         "target": "Tesco",
         "sentiment_score": "-0.222",
         "aspects": "['Stock/Price Action/Future Price']"
+      },
+      {
+        "snippets": "['will all cut petrol prices as oil falls ...']",
+        "target": "Asda",
+        "sentiment_score": "-0.222",
+        "aspects": "['Stock/Price Action/Future Price']"
       }
+
     ]
   },
   "1079": {
@@ -3361,13 +4059,19 @@
       {
         "snippets": "['benchmark investigation']",
         "target": "Shell",
-        "sentiment_score": "0.276",
+        "sentiment_score": "0.264",
         "aspects": "['Stock/Insider Activity/Insider Trading']"
       },
       {
         "snippets": "['benchmark investigation']",
         "target": "Statoil",
-        "sentiment_score": "0.294",
+        "sentiment_score": "0.264",
+        "aspects": "['Stock/Insider Activity/Insider Trading']"
+      },
+      {
+        "snippets": "['benchmark investigation']",
+        "target": "BP",
+        "sentiment_score": "0.264",
         "aspects": "['Stock/Insider Activity/Insider Trading']"
       }
     ]
@@ -3378,9 +4082,16 @@
       {
         "snippets": "['Explores Potential Deal ']",
         "target": "AstraZeneca",
-        "sentiment_score": "0.372",
+        "sentiment_score": "0.11",
+        "aspects": "['Corporate/M&A/Joint Venture']"
+      },
+       {
+        "snippets": "['Explores Potential Deal ']",
+        "target": "Acerta",
+        "sentiment_score": "0.112",
         "aspects": "['Corporate/M&A/Joint Venture']"
       }
+
     ]
   },
   "1095": {
@@ -3400,13 +4111,20 @@
       {
         "snippets": "['chases Acerta to secure next cancer drug winner']",
         "target": "AstraZeneca",
-        "sentiment_score": "0.519",
+        "sentiment_score": "0.188",
+        "aspects": "['Stock/Buyside/Stock Buyside']"
+      },
+      {
+        "snippets": "['chases Acerta to secure next cancer drug winner']",
+        "target": "Acerta",
+        "sentiment_score": "0.159",
         "aspects": "['Stock/Buyside/Stock Buyside']"
       }
+
     ]
   },
   "1112": {
-    "sentence": "CompaniesTesco off to a bad start over Xmas â€“ Kantar",
+    "sentence": "Tesco off to a bad start over Xmas â€“ Kantar",
     "info": [
       {
         "snippets": "['off to a bad start over Xmas']",
@@ -3422,7 +4140,13 @@
       {
         "snippets": "['emerge as potential bidders for']",
         "target": "Julius Baer",
-        "sentiment_score": "0.31",
+        "sentiment_score": "0.16",
+        "aspects": "['Stock/Buyside/Stock Buyside']"
+      },
+      {
+        "snippets": "['emerge as potential bidders for']",
+        "target": "DBS",
+        "sentiment_score": "0.16",
         "aspects": "['Stock/Buyside/Stock Buyside']"
       }
     ]
@@ -3432,10 +4156,17 @@
     "info": [
       {
         "snippets": "['Are Red-Hot Growth Stars']",
-        "target": "Dixons Carphone",
+        "target": "Dixons Carphone PLC",
+        "sentiment_score": "0.766",
+        "aspects": "['Corporate/Dividend Policy/Dividend/Dividend going up']"
+      },
+      {
+        "snippets": "['Are Red-Hot Growth Stars']",
+        "target": "AstraZeneca plc",
         "sentiment_score": "0.766",
         "aspects": "['Corporate/Dividend Policy/Dividend/Dividend going up']"
       }
+
     ]
   },
   "1120": {
@@ -3444,7 +4175,7 @@
       {
         "snippets": "['to buy Wilshire Bancorp in $1 bln deal']",
         "target": "Wilshire Bancorp",
-        "sentiment_score": "0.818",
+        "sentiment_score": "0.418",
         "aspects": "['Corporate/M&A']"
       }
     ]
@@ -3455,7 +4186,7 @@
       {
         "snippets": "['price jumps on report of Comcast's NBCUniversal']",
         "target": "Comcast",
-        "sentiment_score": "0.623",
+        "sentiment_score": "0.123",
         "aspects": "['Stock/Price Action']"
       },
       {
@@ -3472,7 +4203,7 @@
       {
         "snippets": "['Possible IPO for Agricultural Trading Business']",
         "target": "Glencore",
-        "sentiment_score": "0.408",
+        "sentiment_score": "0.308",
         "aspects": "['Stock/IPO']"
       }
     ]
@@ -3485,16 +4216,29 @@
         "target": "Tesco",
         "sentiment_score": "-0.175",
         "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Can Christmas Save..... ?']",
+        "target": "Sainsbury's plc",
+        "sentiment_score": "-0.175",
+        "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "1133": {
-    "sentence": "UPDATE 1-AstraZeneca boosts respiratory unit with $575 mln Takeda deal",
+    "sentence": "AstraZeneca boosts respiratory unit with $575 mln Takeda deal",
     "info": [
       {
         "snippets": "[' boosts respiratory unit with $575 mln Takeda deal']",
         "target": "Takeda",
-        "sentiment_score": "0.47",
+        "sentiment_score": "0.35",
+        "aspects": "['Corporate/M&A/']"
+      },
+      {
+        "snippets": "[' boosts respiratory unit with $575 mln Takeda deal']",
+        "target": "AstraZeneca",
+        "sentiment_score": "0.35",
         "aspects": "['Corporate/M&A/']"
       }
     ]
@@ -3504,10 +4248,17 @@
     "info": [
       {
         "snippets": "['win Â£100m BP contract extension']",
+        "target": "Bilfinger Industrial Services",
+        "sentiment_score": "0.253",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['win Â£100m BP contract extension']",
         "target": "BP",
-        "sentiment_score": "0.113",
+        "sentiment_score": "0.07",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "1143": {
@@ -3533,9 +4284,16 @@
       {
         "snippets": "['weighing up Acerta bid to']",
         "target": "AstraZeneca",
-        "sentiment_score": "0.284",
+        "sentiment_score": "0.184",
+        "aspects": "['Stock/Buyside/Stock Buyside']"
+      },
+      {
+        "snippets": "['weighing up Acerta bid to']",
+        "target": "Acerta",
+        "sentiment_score": "0.242",
         "aspects": "['Stock/Buyside/Stock Buyside']"
       }
+
     ]
   },
   "1154": {
@@ -3543,7 +4301,13 @@
     "info": [
       {
         "snippets": "['2 Turnaround Buys']",
-        "target": "Home Retail Group",
+        "target": "BHP Billiton plc",
+        "sentiment_score": "0.492",
+        "aspects": "['Economy/Central Banks/Monetary Policy/Monetary Policy - SNB']"
+      },
+      {
+        "snippets": "['2 Turnaround Buys']",
+        "target": "Home Retail Group Plc",
         "sentiment_score": "0.492",
         "aspects": "['Economy/Central Banks/Monetary Policy/Monetary Policy - SNB']"
       }
@@ -3565,8 +4329,14 @@
     "info": [
       {
         "snippets": "['to buy Baxalta for $32 billion after 6-month pursuit']",
+        "target": "Baxalta",
+        "sentiment_score": "0.36",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to buy Baxalta for $32 billion after 6-month pursuit']",
         "target": "Shire",
-        "sentiment_score": "0.437",
+        "sentiment_score": "0.237",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -3587,7 +4357,7 @@
     "info": [
       {
         "snippets": "['says internal synergy goals from Baxalta deal higher']",
-        "target": "Shire",
+        "target": "Baxalta",
         "sentiment_score": "0.287",
         "aspects": "['Corporate/Company Communication/Dividend']"
       }
@@ -3610,7 +4380,7 @@
       {
         "snippets": "['with Christmas bounce back']",
         "target": "Debenhams",
-        "sentiment_score": "0.573",
+        "sentiment_score": "0.619",
         "aspects": "['Stock/Price Action/Volatility']"
       },
       {
@@ -3651,11 +4421,18 @@
         "target": "UBI",
         "sentiment_score": "0.133",
         "aspects": "['Corporate/Risks/Extraordinary Meeting']"
+      },
+      {
+        "snippets": "['meet Italy econ minister as M&A talk heats up']",
+        "target": "BPM",
+        "sentiment_score": "0.133",
+        "aspects": "['Corporate/Risks/Extraordinary Meeting']"
       }
+ 
     ]
   },
   "1200": {
-    "sentence": "CompaniesHome Retail trims gains but is considered 'in play'",
+    "sentence": "Home Retail trims gains but is considered 'in play'",
     "info": [
       {
         "snippets": "['trims gains but is considered 'in play'']",
@@ -3671,15 +4448,22 @@
       {
         "snippets": "['says to partner with Kirin if']",
         "target": "SABMiller",
-        "sentiment_score": "0.577",
+        "sentiment_score": "0.177",
         "aspects": "['Corporate/Sales/Partnership']"
       },
       {
         "snippets": "['says to partner with Kirin if']",
         "target": "San Miguel",
-        "sentiment_score": "0.19",
+        "sentiment_score": "0.09",
+        "aspects": "['Corporate/Sales/Partnership']"
+      },
+      {
+        "snippets": "['says to partner with Kirin if']",
+        "target": "Kirin",
+        "sentiment_score": "0.09",
         "aspects": "['Corporate/Sales/Partnership']"
       }
+
     ]
   },
   "1203": {
@@ -3690,29 +4474,37 @@
         "target": "Shell",
         "sentiment_score": "-0.266",
         "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Investors Remain Skeptical About Shell-BG Deal']",
+        "target": "BG",
+        "sentiment_score": "-0.266",
+        "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "1210": {
-    "sentence": "MarketsShire up 2.5% and Baxalta up 6% on $32bn deal",
+    "sentence": "Shire up 2.5% and Baxalta up 6% on $32bn deal",
     "info": [
       {
         "snippets": "['MarketsShire up 2.5% ']",
         "target": "Shire",
         "sentiment_score": "0.487",
         "aspects": "['Stock/Buyside/Stock Buyside']"
+      },
+      {
+        "snippets": "['MarketsShire up 2.5% ']",
+        "target": "Baxalta",
+        "sentiment_score": "0.655",
+        "aspects": "['Stock/Buyside/Stock Buyside']"
       }
+
     ]
   },
   "1217": {
     "sentence": "Shire share price under pressure after $32bn Baxalta deal",
     "info": [
-      {
-        "snippets": "['share price under pressure after $32bn Baxalta deal']",
-        "target": "Baxalta",
-        "sentiment_score": "-0.198",
-        "aspects": "['Stock/Price Action']"
-      },
       {
         "snippets": "['share price under pressure after $32bn Baxalta deal']",
         "target": "Shire",
@@ -3738,7 +4530,7 @@
       {
         "snippets": "['Said to Name New CEO With Pearson Still Hospitalized']",
         "target": "Valeant",
-        "sentiment_score": "0.015",
+        "sentiment_score": "-0.01",
         "aspects": "['Corporate/Appointment']"
       }
     ]
@@ -3762,6 +4554,12 @@
         "target": "SABMiller",
         "sentiment_score": "0.236",
         "aspects": "['Stock/Buyside/Stock Buyside']"
+      },
+      {
+        "snippets": "['to submit bid next week']",
+        "target": "Asahi",
+        "sentiment_score": "0.08",
+        "aspects": "['Stock/Buyside/Stock Buyside']"
       }
     ]
   },
@@ -3782,26 +4580,27 @@
       {
         "snippets": "['Broker tips:']",
         "target": "RBS",
-        "sentiment_score": "0.381",
+        "sentiment_score": "0.0",
         "aspects": "['Corporate/Rumors/Rumors']"
       },
       {
         "snippets": "['Broker tips:']",
         "target": "Sage",
-        "sentiment_score": "0.393",
+        "sentiment_score": "0.0",
+        "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Broker tips:']",
+        "target": "Croda",
+        "sentiment_score": "0.0",
         "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "1241": {
     "sentence": "Shell share price: Standard Life announce position against BG acquisition",
     "info": [
-      {
-        "snippets": "['Standard Life announce position against BG acquisition']",
-        "target": "Shell",
-        "sentiment_score": "-0.134",
-        "aspects": "['Corporate/M&A/M&A']"
-      },
       {
         "snippets": "['Standard Life announce position against BG acquisition']",
         "target": "Standard Life",
@@ -3829,7 +4628,14 @@
         "target": "Tesco",
         "sentiment_score": "0.439",
         "aspects": "['Market/Volatility/Volatility']"
+      },
+      {
+        "snippets": "['Britain's FTSE outperforms Europe, Royal Mail and Tesco rise']",
+        "target": "Royal Mail",
+        "sentiment_score": "0.439",
+        "aspects": "['Market/Volatility/Volatility']"
       }
+
     ]
   },
   "1256": {
@@ -3859,10 +4665,17 @@
     "info": [
       {
         "snippets": "['to attack UK grocery market']",
+        "target": "Amazon",
+        "sentiment_score": "0.257",
+        "aspects": "['Market/Market/Market Outlook']"
+      },
+      {
+        "snippets": "['to attack UK grocery market']",
         "target": "Morrisons",
         "sentiment_score": "0.333",
         "aspects": "['Market/Market/Market Outlook']"
       }
+
     ]
   },
   "1287": {
@@ -3888,14 +4701,21 @@
     ]
   },
   "1289": {
-    "sentence": "Merged LSE and Deutsche BÃ¶rse would be led by Germany's Kengeter",
+    "sentence": "Merged LSE and Deutsche Boerse would be led by Germany's Kengeter",
     "info": [
       {
-        "snippets": "['Merged LSE and Deutsche BÃ¶rse']",
+        "snippets": "['Merged LSE and Deutsche Boerse']",
         "target": "LSE",
-        "sentiment_score": "0.136",
+        "sentiment_score": "0.036",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Merged LSE and Deutsche Boerse']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "0.036",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1297": {
@@ -3912,7 +4732,14 @@
         "target": "John Wood Group PLC",
         "sentiment_score": "0.103",
         "aspects": "['Corporate/Rumors/Scoop']"
+      },
+      {
+        "snippets": "['Should You Buy....?']",
+        "target": "British American Tobacco plc",
+        "sentiment_score": "0.103",
+        "aspects": "['Corporate/Rumors/Scoop']"
       }
+
     ]
   },
   "1311": {
@@ -3921,6 +4748,12 @@
       {
         "snippets": "['Is Trouble Brewing At Legal & General Group Plc And Aviva plc?']",
         "target": "Legal & General Group Plc",
+        "sentiment_score": "-0.271",
+        "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Is Trouble Brewing At Legal & General Group Plc And Aviva plc?']",
+        "target": "Aviva plc",
         "sentiment_score": "-0.271",
         "aspects": "['Corporate/Rumors/Rumors']"
       }
@@ -3949,7 +4782,7 @@
     ]
   },
   "1315": {
-    "sentence": "CompaniesMeggitt profits hit by weak energy and military markets",
+    "sentence": "Meggitt profits hit by weak energy and military markets",
     "info": [
       {
         "snippets": "['profits hit by weak energy and military markets']",
@@ -3998,13 +4831,20 @@
       {
         "snippets": "[' raises concerns over proposed..']",
         "target": "LSE",
-        "sentiment_score": "-0.347",
+        "sentiment_score": "-0.247",
+        "aspects": "['Corporate/Risks/Sale Halt']"
+      },
+      {
+        "snippets": "[' raises concerns over proposed..']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "-0.247",
         "aspects": "['Corporate/Risks/Sale Halt']"
       }
+
     ]
   },
   "1334": {
-    "sentence": "MarketsBP promotes upstream boss to deputy CEO",
+    "sentence": "BP promotes upstream boss to deputy CEO",
     "info": [
       {
         "snippets": "['promotes upstream boss to deputy CEO']",
@@ -4081,7 +4921,7 @@
       {
         "snippets": "['considers offer for']",
         "target": "LSE",
-        "sentiment_score": "0.396",
+        "sentiment_score": "0.296",
         "aspects": "['Corporate/Rumors/Scoop']"
       }
     ]
@@ -4092,7 +4932,7 @@
       {
         "snippets": "['LSE surges as ICE says mulling offer']",
         "target": "ICE",
-        "sentiment_score": "0.226",
+        "sentiment_score": "0.126",
         "aspects": "['Corporate/M&A']"
       },
       {
@@ -4100,7 +4940,20 @@
         "target": "LSE",
         "sentiment_score": "0.843",
         "aspects": "['Corporate/M&A']"
+      },
+      {
+        "snippets": "['LSE surges as ICE says mulling offer']",
+        "target": "Ashtead",
+        "sentiment_score": "-0.726",
+        "aspects": "['Corporate/M&A']"
+      },
+      {
+        "snippets": "['LSE surges as ICE says mulling offer']",
+        "target": "Barclays",
+        "sentiment_score": "-0.726",
+        "aspects": "['Corporate/M&A']"
       }
+
     ]
   },
   "1360": {
@@ -4111,18 +4964,6 @@
         "target": "Balfour Beatty plc",
         "sentiment_score": "0.413",
         "aspects": "['Corporate/Dividend Policy']"
-      },
-      {
-        "snippets": "['Set To Reinstate Dividend ']",
-        "target": "Centrica PLC",
-        "sentiment_score": "0.403",
-        "aspects": "['Corporate/Dividend Policy/Dividend']"
-      },
-      {
-        "snippets": "['Set To Reinstate Dividend ']",
-        "target": "Rival National Grid plc",
-        "sentiment_score": "0.408",
-        "aspects": "['Corporate/Dividend Policy/Dividend']"
       }
     ]
   },
@@ -4145,7 +4986,14 @@
         "target": "Sanofi",
         "sentiment_score": "0.066",
         "aspects": "['Corporate/Appointment/Executive Appointment']"
+      },
+      {
+        "snippets": "['Sanofi poaches AstraZeneca scientist']",
+        "target": "AstraZeneca",
+        "sentiment_score": "-0.091",
+        "aspects": "['Corporate/Appointment/Executive Appointment']"
       }
+
     ]
   },
   "1373": {
@@ -4182,7 +5030,7 @@
     ]
   },
   "1379": {
-    "sentence": "London Stock Exchange seals Â£22 billion merger with Germany's Deutsche BÃ¶rse",
+    "sentence": "London Stock Exchange seals Â£22 billion merger with Germany's Deutsche Boerse",
     "info": [
       {
         "snippets": "['seals Â£22 billion merger with']",
@@ -4200,7 +5048,14 @@
         "target": "LSE",
         "sentiment_score": "-0.2",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['owner ICE may gatecrash Deutsche Boerse-LSE merger']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "-0.2",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+ 
     ]
   },
   "1381": {
@@ -4210,6 +5065,12 @@
         "snippets": "['to Sell SABMiller Stake in']",
         "target": "SABMiller",
         "sentiment_score": "-0.045",
+        "aspects": "['Stock/Signal/Sell Signal']"
+      },
+      {
+        "snippets": "['to Sell SABMiller Stake in']",
+        "target": "AB InBev",
+        "sentiment_score": "0.0",
         "aspects": "['Stock/Signal/Sell Signal']"
       }
     ]
@@ -4222,7 +5083,14 @@
         "target": "LSE",
         "sentiment_score": "0.105",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['merger would signal end to']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "0.105",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1387": {
@@ -4237,7 +5105,7 @@
     ]
   },
   "1396": {
-    "sentence": "Industry NewsWolseley confident in reslilience amid mixed markets",
+    "sentence": "Wolseley confident in reslilience amid mixed markets",
     "info": [
       {
         "snippets": "['confident in reslilience amid mixed markets']",
@@ -4299,7 +5167,14 @@
         "target": "Morrisons",
         "sentiment_score": "0.389",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['grocery deal with Morrisons ']",
+        "target": "Amazon",
+        "sentiment_score": "0.246",
+        "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "1425": {
@@ -4310,7 +5185,14 @@
         "target": "LSE",
         "sentiment_score": "0.328",
         "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Said to Start Lining Up Financing for']",
+        "target": "ICE",
+        "sentiment_score": "0.112",
+        "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "1426": {
@@ -4321,7 +5203,14 @@
         "target": "Statoil",
         "sentiment_score": "-0.242",
         "aspects": "['Corporate/Appointment/Staff Hiring']"
+      },
+      {
+        "snippets": "['to Withdraw Staff From']",
+        "target": "BP",
+        "sentiment_score": "-0.242",
+        "aspects": "['Corporate/Appointment/Staff Hiring']"
       }
+
     ]
   },
   "1431": {
@@ -4332,7 +5221,14 @@
         "target": "LSE",
         "sentiment_score": "0.358",
         "aspects": "['Corporate/M&A/Proposed Merger']"
+      },
+      {
+        "snippets": "['Support Deutsche Boerse-LSE Merger']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "0.358",
+        "aspects": "['Corporate/M&A/Proposed Merger']"
       }
+
     ]
   },
   "1435": {
@@ -4371,7 +5267,14 @@
         "target": "Shell",
         "sentiment_score": "-0.102",
         "aspects": "['Corporate/Strategy/Reorganization']"
+      },
+      {
+        "snippets": "['plan to break up Motiva, divide up assets']",
+        "target": "Motiva",
+        "sentiment_score": "-0.411",
+        "aspects": "['Corporate/Strategy/Reorganization']"
       }
+
     ]
   },
   "1449": {
@@ -4382,7 +5285,14 @@
         "target": "SAB",
         "sentiment_score": "-0.079",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to sell more SAB assets as seeks']",
+        "target": "AB InBev",
+        "sentiment_score": "-0.021",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+ 
     ]
   },
   "1455": {
@@ -4402,9 +5312,16 @@
       {
         "snippets": "['Expects To Close Deal For']",
         "target": "CaixaBank",
-        "sentiment_score": "0.375",
+        "sentiment_score": "0.233",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Expects To Close Deal For']",
+        "target": "Banco BPI",
+        "sentiment_score": "0.371",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "1463": {
@@ -4413,9 +5330,16 @@
       {
         "snippets": "['Group mulls takeover of Canada's Entertainment One']",
         "target": "ITV",
-        "sentiment_score": "0.422",
+        "sentiment_score": "0.222",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Group mulls takeover of Canada's Entertainment One']",
+        "target": "Entertainment One",
+        "sentiment_score": "0.398",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1469": {
@@ -4424,13 +5348,13 @@
       {
         "snippets": "['One dispels ITV takeover rumours']",
         "target": "Entertainment One",
-        "sentiment_score": "0.138",
+        "sentiment_score": "-0.07",
         "aspects": "['Corporate/Rumors']"
       },
       {
         "snippets": "['dispels ITV takeover rumours']",
         "target": "ITV",
-        "sentiment_score": "0.003",
+        "sentiment_score": "-0.003",
         "aspects": "['Corporate/Rumors']"
       }
     ]
@@ -4449,7 +5373,14 @@
         "target": "GE",
         "sentiment_score": "0.211",
         "aspects": "['Stock/Price Action/Volatility/Sell-Off']"
+      },
+      {
+        "snippets": "['to Sell Majority Stake in Bank BPH's Core Bank']",
+        "target": "Alior Bank",
+        "sentiment_score": "0.123",
+        "aspects": "['Stock/Price Action/Volatility/Sell-Off']"
       }
+
     ]
   },
   "1476": {
@@ -4458,7 +5389,7 @@
       {
         "snippets": "['with StanChart for UK unit sale - source']",
         "target": "StanChart",
-        "sentiment_score": "0.218",
+        "sentiment_score": "0.143",
         "aspects": "['Stock/IPO']"
       },
       {
@@ -4477,7 +5408,14 @@
         "target": "Tower Development",
         "sentiment_score": "0.366",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Crown Castle buys Tower Development Corp']",
+        "target": "Crown Castle",
+        "sentiment_score": "0.112",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1492": {
@@ -4492,9 +5430,16 @@
       {
         "snippets": "['sells half of stake in ecommerce site Lazada to Alibaba for Â£90m']",
         "target": "Tesco",
-        "sentiment_score": "0.365",
+        "sentiment_score": "0.265",
+        "aspects": "['Stock/Price Action/Volatility/Sell-Off']"
+      },
+      {
+        "snippets": "['sells half of stake in ecommerce site Lazada to Alibaba for Â£90m']",
+        "target": "Alibaba",
+        "sentiment_score": "0.122",
         "aspects": "['Stock/Price Action/Volatility/Sell-Off']"
       }
+
     ]
   },
   "1496": {
@@ -4503,7 +5448,19 @@
       {
         "snippets": "['Agree on Plan for BPI Angola Exposure']",
         "target": "CaixaBank",
-        "sentiment_score": "0.244",
+        "sentiment_score": "0.104",
+        "aspects": "['Corporate/Strategy/Company Agreement']"
+      },
+      {
+        "snippets": "['Agree on Plan for BPI Angola Exposure']",
+        "target": "dos Santos",
+        "sentiment_score": "0.104",
+        "aspects": "['Corporate/Strategy/Company Agreement']"
+      },
+      {
+        "snippets": "['Agree on Plan for BPI Angola Exposure']",
+        "target": "BPI",
+        "sentiment_score": "0.01",
         "aspects": "['Corporate/Strategy/Company Agreement']"
       }
     ]
@@ -4514,7 +5471,13 @@
       {
         "snippets": "['Isabel dos Santos Reach Agreement Over Angola Exposure']",
         "target": "CaixaBank",
-        "sentiment_score": "0.243",
+        "sentiment_score": "0.105",
+        "aspects": "['Corporate/Strategy/Company Agreement']"
+      },
+      {
+        "snippets": "['Isabel dos Santos Reach Agreement Over Angola Exposure']",
+        "target": "Isabel dos Santos",
+        "sentiment_score": "0.105",
         "aspects": "['Corporate/Strategy/Company Agreement']"
       }
     ]
@@ -4527,7 +5490,14 @@
         "target": "Caixabank",
         "sentiment_score": "0.185",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['launches new takeover bid for Banco BPI']",
+        "target": "Banco BPI",
+        "sentiment_score": "0.244",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1507": {
@@ -4549,7 +5519,14 @@
         "target": "ITV",
         "sentiment_score": "0.199",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to pursue takeover of Canada's Entertainment One']",
+        "target": "Entertainment One",
+        "sentiment_score": "0.234",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1516": {
@@ -4560,7 +5537,14 @@
         "target": "Shire",
         "sentiment_score": "0.224",
         "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['Sees Baxalta Deal Closing as Expected']",
+        "target": "Baxalta",
+        "sentiment_score": "0.139",
+        "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "1517": {
@@ -4570,6 +5554,12 @@
         "snippets": "['to Buy Barclay's Wealth Management Unit']",
         "target": "OCBC",
         "sentiment_score": "0.257",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to Buy Barclay's Wealth Management Unit']",
+        "target": "Barclay",
+        "sentiment_score": "0.242",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -4590,7 +5580,7 @@
     "info": [
       {
         "snippets": "['share price lifts']",
-        "target": "Lloyds",
+        "target": "Lloyds Banking Group",
         "sentiment_score": "0.292",
         "aspects": "['Stock/Price Action']"
       }
@@ -4601,8 +5591,8 @@
     "info": [
       {
         "snippets": "['Should You Follow Berkshire Hathaway Into Apple Stock?']",
-        "target": "Berkshire Hathaway",
-        "sentiment_score": "0",
+        "target": "Apple",
+        "sentiment_score": "0.177",
         "aspects": "['Corporate/Rumors/Scoop']"
       }
     ]
@@ -4630,7 +5620,7 @@
     ]
   },
   "1559": {
-    "sentence": "UPDATE 3-Ex-Barclays director accused by US of illegal tips to plumber",
+    "sentence": "Ex-Barclays director accused by US of illegal tips to plumber",
     "info": [
       {
         "snippets": "['of illegal tips to plumber']",
@@ -4646,9 +5636,16 @@
       {
         "snippets": "['AB InBev, SABMiller deal']",
         "target": "SABMiller",
-        "sentiment_score": "0.392",
+        "sentiment_score": "0.292",
+        "aspects": "['Corporate/Sales/Deal']"
+      },
+      {
+        "snippets": "['AB InBev, SABMiller deal']",
+        "target": "AB InBev",
+        "sentiment_score": "0.292",
         "aspects": "['Corporate/Sales/Deal']"
       }
+
     ]
   },
   "1568": {
@@ -4678,7 +5675,13 @@
     "info": [
       {
         "snippets": "['names Kara Raiguel to lead General Re unit']",
-        "target": "Berkshire",
+        "target": "Berkshire Hathaway",
+        "sentiment_score": "0.077",
+        "aspects": "['Corporate/Appointment']"
+      },
+      {
+        "snippets": "['names Kara Raiguel to lead General Re unit']",
+        "target": "General Re",
         "sentiment_score": "0.077",
         "aspects": "['Corporate/Appointment']"
       }
@@ -4692,7 +5695,14 @@
         "target": "Dialog",
         "sentiment_score": "-0.584",
         "aspects": "['Stock/Price Action/Volume/Unusual Low Volume']"
+      },
+      {
+        "snippets": "['stocks hover near 3-week low']",
+        "target": "BHP",
+        "sentiment_score": "-0.584",
+        "aspects": "['Stock/Price Action/Volume/Unusual Low Volume']"
       }
+
     ]
   },
   "1586": {
@@ -4712,9 +5722,16 @@
       {
         "snippets": "['SABMiller buyout plan']",
         "target": "AB InBrev",
-        "sentiment_score": "0.437",
+        "sentiment_score": "0.237",
+        "aspects": "['Corporate/Strategy/Buyout']"
+      },
+      {
+        "snippets": "['SABMiller buyout plan']",
+        "target": "SABMiller",
+        "sentiment_score": "0.356",
         "aspects": "['Corporate/Strategy/Buyout']"
       }
+
     ]
   },
   "1598": {
@@ -4758,6 +5775,12 @@
         "target": "Standard Chartered",
         "sentiment_score": "0.128",
         "aspects": "['Corporate/Strategy/Corporate Planning']"
+      },
+      {
+        "snippets": "['Chasing Standard Chartered']",
+        "target": "RBS",
+        "sentiment_score": "0.128",
+        "aspects": "['Corporate/Strategy/Corporate Planning']"
       }
     ]
   },
@@ -4777,7 +5800,7 @@
     "info": [
       {
         "snippets": "['first-quarter global room revenue']",
-        "target": "InterContinental",
+        "target": "InterContinental Hotels",
         "sentiment_score": "-0.329",
         "aspects": "['Corporate/Sales']"
       }
@@ -4791,18 +5814,32 @@
         "target": "AstraZeneca",
         "sentiment_score": "0.395",
         "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to Buy Anaesthetics From AstraZeneca for $520 Million']",
+        "target": "Aspen",
+        "sentiment_score": "0.148",
+        "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1634": {
-    "sentence": "London Stock Exchange â€“ Deutsche Boerse merger under threat from Brexit",
+    "sentence": "London Stock Exchange - Deutsche Boerse merger under threat from Brexit",
     "info": [
       {
         "snippets": "['Deutsche Boerse merger under threat']",
         "target": "London Stock Exchange",
-        "sentiment_score": "-0.421",
+        "sentiment_score": "-0.321",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Deutsche Boerse merger under threat']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "-0.321",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1635": {
@@ -4828,13 +5865,20 @@
       {
         "snippets": "['BP joins forces with Det Norske in Norway']",
         "target": "Det Norske",
-        "sentiment_score": "0.248",
+        "sentiment_score": "0.148",
+        "aspects": "['Corporate/Strategy/Company Agreement']"
+      },
+      {
+        "snippets": "['BP joins forces with Det Norske in Norway']",
+        "target": "BP",
+        "sentiment_score": "0.148",
         "aspects": "['Corporate/Strategy/Company Agreement']"
       }
+
     ]
   },
   "1639": {
-    "sentence": "BRIEF-Legal & General's retirement business books 4 billion stg H1 sales",
+    "sentence": "Legal & General's retirement business books 4 billion stg H1 sales",
     "info": [
       {
         "snippets": "['books 4 billion stg H1 sales']",
@@ -4861,13 +5905,13 @@
       {
         "snippets": "['downplay Brexit threat']",
         "target": "Barclays",
-        "sentiment_score": "0",
+        "sentiment_score": "-0.142",
         "aspects": "['Corporate/Risks']"
       },
       {
         "snippets": "['Goldman Sachs, Barclays, HSBC downplay Brexit threat']",
         "target": "Goldman Sachs",
-        "sentiment_score": "-0.147",
+        "sentiment_score": "-0.141",
         "aspects": "['Corporate/Risks']"
       },
       {
@@ -4892,22 +5936,29 @@
         "target": "SABMiller",
         "sentiment_score": "0.329",
         "aspects": "['Corporate/Strategy/Investment']"
+      },
+      {
+        "snippets": "['Asahi could be about to snap up more of SABMiller's beers ahead of AB InBev sale']",
+        "target": "AB InBev",
+        "sentiment_score": "0.155",
+        "aspects": "['Corporate/Strategy/Investment']"
       }
+
     ]
   },
   "1670": {
-    "sentence": "LSE-Deutsche BÃ¶rse dealmakers wrong to ignore Brexit risk",
+    "sentence": "LSE-Deutsche Boerse dealmakers wrong to ignore Brexit risk",
     "info": [
       {
         "snippets": "['wrong to ignore Brexit ris']",
-        "target": "Deutsche BÃ¶rse",
-        "sentiment_score": "-0.473",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "-0.373",
         "aspects": "['Corporate/Risks']"
       },
       {
         "snippets": "['dealmakers wrong to ignore Brexit risk']",
         "target": "LSE",
-        "sentiment_score": "-0.415",
+        "sentiment_score": "-0.373",
         "aspects": "['Corporate/Risks']"
       }
     ]
@@ -4940,7 +5991,7 @@
       {
         "snippets": "['3 must-have growth stocks?']",
         "target": "ASOS plc",
-        "sentiment_score": "0",
+        "sentiment_score": "0.063",
         "aspects": "['Corporate/Rumors/Scoop']"
       },
       {
@@ -4948,7 +5999,14 @@
         "target": "Domino's Pizza Group plc",
         "sentiment_score": "0.063",
         "aspects": "['Corporate/Rumors/Scoop']"
+      },
+      {
+        "snippets": "['3 must-have growth stocks?']",
+        "target": "ARM Holdings plc",
+        "sentiment_score": "0.063",
+        "aspects": "['Corporate/Rumors/Scoop']"
       }
+
     ]
   },
   "1700": {
@@ -4959,7 +6017,14 @@
         "target": "Priceline",
         "sentiment_score": "0.847",
         "aspects": "['Stock/Coverage']"
+      },
+      {
+        "snippets": "['stock jumps to new high']",
+        "target": "Barclays",
+        "sentiment_score": "0.0",
+        "aspects": "['Stock/Coverage']"
       }
+
     ]
   },
   "1708": {
@@ -4976,6 +6041,12 @@
         "target": "Tesco",
         "sentiment_score": "0.23",
         "aspects": "['Stock/Signal/Sell Signal']"
+      },
+      {
+        "snippets": "['set to sell Kipa, Giraffe businesses']",
+        "target": "Giraffe",
+        "sentiment_score": "-0.192",
+        "aspects": "['Stock/Signal/Sell Signal']"
       }
     ]
   },
@@ -4984,7 +6055,7 @@
     "info": [
       {
         "snippets": "['to Acquire AdeS Soy-Based Beverage Business From Unilever']",
-        "target": "Coca-Cola Companp",
+        "target": "Coca-Cola Company",
         "sentiment_score": "0.259",
         "aspects": "['Corporate/M&A/M&A']"
       },
@@ -4992,6 +6063,12 @@
         "snippets": "['to Acquire AdeS Soy-Based Beverage Business From Unilever']",
         "target": "Coca-Cola FEMSA",
         "sentiment_score": "0.293",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['to Acquire AdeS Soy-Based Beverage Business From Unilever']",
+        "target": "Unilever",
+        "sentiment_score": "0.08",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -5013,7 +6090,19 @@
       {
         "snippets": "['secure ownership of Ireland's Dundrum - Quick Facts']",
         "target": "JV Partner",
-        "sentiment_score": "0.427",
+        "sentiment_score": "0.327",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['secure ownership of Ireland's Dundrum - Quick Facts']",
+        "target": "Hammerson",
+        "sentiment_score": "0.327",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+     {
+        "snippets": "['secure ownership of Ireland's Dundrum - Quick Facts']",
+        "target": "Dundrum",
+        "sentiment_score": "0.131",
         "aspects": "['Corporate/M&A/M&A']"
       }
     ]
@@ -5054,7 +6143,14 @@
         "target": "Great Portland Estates plc",
         "sentiment_score": "0.165",
         "aspects": "['Corporate/Rumors/Rumors']"
+      },
+      {
+        "snippets": "['Should you buy…. following today's news?']",
+        "target": "Associated British Foods plc",
+        "sentiment_score": "0.165",
+        "aspects": "['Corporate/Rumors/Rumors']"
       }
+
     ]
   },
   "1737": {
@@ -5065,7 +6161,14 @@
         "target": "Wells Fargo",
         "sentiment_score": "0.429",
         "aspects": "['Stock/Signal/Buy Signal']"
+      },
+      {
+        "snippets": "['seeks to boost its Wells Fargo stake above 10 percen']",
+        "target": "Berkshire",
+        "sentiment_score": "0.111",
+        "aspects": "['Stock/Signal/Buy Signal']"
       }
+
     ]
   },
   "1741": {
@@ -5080,25 +6183,39 @@
     ]
   },
   "1742": {
-    "sentence": "London Stock Exchange Shareholders Approve Merger With Deutsche BÃ¶rse",
+    "sentence": "London Stock Exchange Shareholders Approve Merger With Deutsche Boerse",
     "info": [
       {
         "snippets": "['Shareholders Approve Merger With']",
         "target": "London Stock Exchange",
-        "sentiment_score": "0.406",
+        "sentiment_score": "0.306",
+        "aspects": "['Corporate/M&A/M&A']"
+      },
+      {
+        "snippets": "['Shareholders Approve Merger With']",
+        "target": "Deutsche Boerse",
+        "sentiment_score": "0.306",
         "aspects": "['Corporate/M&A/M&A']"
       }
+
     ]
   },
   "1743": {
-    "sentence": "UPDATE 1-Berkshire applies to boost Wells Fargo stake above 10 pct",
+    "sentence": "Berkshire applies to boost Wells Fargo stake above 10 pct",
     "info": [
       {
         "snippets": "['applies to boost Wells Fargo stake above 10 percen']",
         "target": "Wells Fargo",
         "sentiment_score": "0.432",
         "aspects": "['Stock/Signal/Sell Signal']"
+      },
+      {
+        "snippets": "['applies to boost Wells Fargo stake above 10 percen']",
+        "target": "Berkshire",
+        "sentiment_score": "0.100",
+        "aspects": "['Stock/Signal/Sell Signal']"
       }
+
     ]
   },
   "1748": {
@@ -5109,7 +6226,14 @@
         "target": "Wells Fargo",
         "sentiment_score": "0.484",
         "aspects": "['Stock/Signal/Buy Signal']"
+      },
+      {
+        "snippets": "['applies to boost Wells Fargo stake above 10 percen']",
+        "target": "Berkshire",
+        "sentiment_score": "0.131",
+        "aspects": "['Stock/Signal/Sell Signal']"
       }
+
     ]
   },
   "1750": {
@@ -5120,7 +6244,14 @@
         "target": "M&G",
         "sentiment_score": "-0.807",
         "aspects": "['Corporate/Risks']"
+      },
+      {
+        "snippets": "['M&G suspend property funds as investors panic']",
+        "target": "Aviva",
+        "sentiment_score": "-0.807",
+        "aspects": "['Corporate/Risks']"
       }
+
     ]
   },
   "1754": {
@@ -5135,7 +6266,7 @@
     ]
   },
   "1755": {
-    "sentence": "BRIEF-Aviva aims to increase dividend pay-out ratio to 50 pct in 2017",
+    "sentence": "Aviva aims to increase dividend pay-out ratio to 50 pct in 2017",
     "info": [
       {
         "snippets": "['increase dividend pay-out']",
@@ -5162,9 +6293,16 @@
       {
         "snippets": "['attracts more passengers']",
         "target": "Ryanair",
-        "sentiment_score": "0.259",
+        "sentiment_score": "0.1",
+        "aspects": "['Corporate/Sales/Sales']"
+      },
+      {
+        "snippets": "['attracts more passengers']",
+        "target": "EasyJet",
+        "sentiment_score": "-0.139",
         "aspects": "['Corporate/Sales/Sales']"
       }
+
     ]
   }
 }
