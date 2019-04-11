@@ -1,0 +1,24 @@
+{% extends "page.html" %}
+
+{% block css %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+{% endblock %}
+
+{% block body %}   
+    <div class=main>
+        <table class=sentiments_list>
+            <tr class=sentiments_header_row>
+                {% for col_name in col_names %}
+                    <th>{{ col_name }}</th>
+                {% endfor %}
+		    </tr>
+            {% for row in rows %}
+			    <tr class=sentiments_row>
+	                {% for row_entry in row %}
+				        <td>{{ row_entry }}</td>
+                    {% endfor %}
+			    </tr>
+			{% endfor %}
+        </table>        
+    </div>
+{% endblock %}

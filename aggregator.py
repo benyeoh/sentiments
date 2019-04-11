@@ -87,7 +87,7 @@ def tag_entities_recent_headlines(recent_headlines):
     for source_id, headlines in recent_headlines.iteritems():
         for headline in headlines:
             all_ents = _tag(headline['headline'])
-            headline['targets'] = str(all_ents)
+            headline['targets'] = [s.encode("utf-8") for s in all_ents]
 
 
 def score_recent_headlines(data_dir,

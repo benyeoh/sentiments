@@ -1,0 +1,19 @@
+/*
+.page .dash                                     { border: 0px solid #CCCCCC; min-width: 600px }
+.page .dash > h1                                { display: table; 
+                                                  color: #999;
+                                                  border: 2px solid #CCCCCC; 
+                                                  margin-top: 0px;
+                                                  padding-left: 40px;
+                                                  padding-right: 40px;
+                                                  margin-left: 20px;
+                                                  margin-bottom: 50px; }
+.page .dash .plot_list                          { list-style: none; }
+.page .dash .plot_list > li                     { margin-left: 0; }
+.page .dash .plot_list > li > img               { margin-left: 80px; width: 120px; height: 120px}
+.page .dash .plot_list > li > div               { position: relative; width: 100%; height: 0; padding-bottom: 50%; }
+.page .dash .plot_list > li > div > iframe      { position: absolute; width: 100%; height:100%; left: 0; top: 0; }
+*/
+
+.page .main .sentiments_list th                           { background-color: #bde9ba;  }
+.page .main .sentiments_list th, td                       { border: 2px solid #CCCCCC; font-size: 1.5em }
